@@ -2020,6 +2020,10 @@ invariant@^2.2.2:
   dependencies:
     loose-envify "^1.0.0"
 
+ionicons@^4.2.5:
+  version "4.2.5"
+  resolved "http://registry.npm.taobao.org/ionicons/download/ionicons-4.2.5.tgz#1665e8e08458ffa1a74aaf9f33ed00bce65f1a3c"
+
 is-absolute-url@^2.0.0:
   version "2.1.0"
   resolved "http://registry.npm.taobao.org/is-absolute-url/download/is-absolute-url-2.1.0.tgz#50530dfb84fcc9aa7dbe7852e83a37b93b9f2aa6"

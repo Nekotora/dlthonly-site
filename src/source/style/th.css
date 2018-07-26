@@ -51,6 +51,7 @@ html {
   top: 0;
   left: 0;
   transform: scale(1.1);
+  overflow: hidden;
 }
 
 .leftbar .scene>div{
@@ -265,4 +266,23 @@ html {
   .main .ch {
     padding: 50px 0;
   }
+}
+
+.page_apply .pagetitle{
+}
+
+.page_apply .pagetitle .btn{
+  display: inline-block;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #fff;
+  background: #57689b;
+  margin-right: 40px;
+}
+
+.page_apply .pagetitle h1{
+  line-height: 40px;
 }
