@@ -1,6 +1,7 @@
 # dlthonly-site  
   
 A website for offline touhou event in dalian.  
+**This is unreleased event, content may be modify anytime. Get latest infomation at dlthonly.fmoe.cn !**
 ![dlthonly](./src/source/img/coming.svg)
   
 ### Demo  
