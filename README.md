@@ -1,7 +1,7 @@
 # dlthonly-site  
   
 A website for offline touhou event in dalian.  
-![dlthonly](//wx2.sinaimg.cn/large/005zWjpngy1ftq8ul0pq7j30de0ccaa9.jpg)
+![dlthonly](./src/source/img/coming.svg)
   
 ### Demo  
 https://nekotora.github.io/dlthonly-site/  
