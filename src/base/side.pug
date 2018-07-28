@@ -1,14 +1,12 @@
 .leftbar
       .scene#scene
-        .background(data-depth="0.2")
-        .background.figma(data-depth="0.4")
-        .flow(data-depth="0.7")
-          img(src="./source/img/logo.png")
-        .navbox(data-depth="0.5")
-          .nav
-            a(href="./index.pug#meta") 活动信息
-            a(href="./index.pug#map") 活动地点
-            a(href="./index.pug#booth") 参展摊位
-            a(href="./apply.pug") 报名申请
-            a(href="#ticket") 票务相关
-            a(href="#more") 更多内容
+        .background(data-depth="0.2",style="z-index:5")
+        .background.figma(data-depth="0.4",style="z-index:6")
+        .flow(data-depth="0.5",style="z-index:7")
+          img(src="./source/img/g_logo.png")
+        .shadow(style="z-index:8")
+          .inner
+        .text(data-depth="0.6",style="z-index:9")
+          .titlebox
+            h1 相逢于幻想乡<br><span>属于大连的东方ProjectOnly</span>
+            h2 Touhou Only / Touhou Live Party<br>大连 · 2019.02.24

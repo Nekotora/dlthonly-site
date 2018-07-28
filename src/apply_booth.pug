@@ -1,0 +1,12 @@
+extends  ./base/layout.pug
+
+block header
+  -  nav = "apply"
+
+block main
+  .page_apply
+    .ch.container.pagetitle.clear
+      a.btn.current(href="./apply_booth.pug") <i class="icon ion-md-basket"></i> 大连THO场贩/寄售摊位申请
+      a.btn(href="./apply_staff.pug") <i class="icon ion-md-beer"></i> 大连THO工作人员申请
+    .iframebox
+      <iframe id="wjform" scroll src="https://wj.qq.com/s/2298672/9d62" allowtransparency="true" scrolling="no" frameborder="0" allowfullscreen></iframe>

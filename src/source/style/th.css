@@ -13,6 +13,7 @@ html {
   color: #333;
   line-height: 1.5em;
   overflow-x: hidden;
+  font-size: 15px;
 }
 
 .clear:after {
@@ -74,37 +75,47 @@ html {
   background-position: center center;
 }
 
-.leftbar .navbox,
-.leftbar .nav{
-  pointer-events: all;
-}
-
-.leftbar .nav{
+.leftbar .shadow .inner{
   position: absolute;
-  bottom: 8%;
-  right: 8%;
-  width: 300px;
+  height: 50%;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .5));
 }
 
-.leftbar .nav a{
-  display: inline-block;
-  color: #333;
-  text-decoration: none;
-  padding: 8px 15px;
-  margin: 5px;
-  font-size: 13px;
-  background-color: rgba(0, 0, 0, .3);
+.leftbar .titlebox{
+  position: absolute;
+  bottom: 9%;
+  right: 9%;
+  width: 500px;
   color: #fff;
-  transition: .3s all;
+  text-align: right;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .6);
+  max-width: 100%
 }
 
-.leftbar .nav a:hover{
-  background-color: #57689b;
+.leftbar .titlebox h1{
+  font-size: 33px;
+  padding-bottom: 10px;
+  line-height: 40px;
+  letter-spacing: .2em;
+}
+
+.leftbar .titlebox h1 span{
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.leftbar .titlebox h2{
+  font-size: 15px;
+  letter-spacing: .1em;
+  font-weight: normal;
 }
 
 .leftbar .flow img{
   position: absolute;
-  bottom: 18%;
+  bottom: 24%;
   right: 15%;
   display: inline-block;
   height: 200px;
@@ -120,7 +131,7 @@ html {
   right: 0;
   top: 0;
   width: 60%;
-  background-color: #efefef;
+  background-color: #fafafa;
   min-height: 100%;
 }
 
@@ -128,9 +139,33 @@ html {
   padding: 100px 0;
 }
 
-.ch.hello{
+.ch.header {
   background-color: #57689b;
   color: #FFF;
+  text-align: center;
+}
+
+.ch.header img.logo{
+  height: 260px;
+}
+
+.header .nav a {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 13px;
+  color: #fff;
+  transition: .3s all;
+}
+
+.header .nav a.current {
+  border-bottom: 4px solid #fff;
+}
+
+.header .nav a:hover {
+  background-color: #3c4968;
 }
 
 .ch.hello .g_logo{
@@ -145,29 +180,53 @@ html {
   position: relative;
   padding: 0;
   background: #111;
-  text-align: center;
 }
 
 .ch.map .overmap{
   position: absolute;
   bottom: 5%;
-  right: 5%;
-  width: 300px;
-  padding: 30px 0;
-  color: #333;
-  background-color: rgba(255, 255, 255, .6);
+  left: 0;
+  width: 100%;
   z-index: 2333;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .12);
+}
+
+.ch.map .overmap .container{
+    color: #333;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .12);
+}
+
+.ch.map .overmap .container>div{
+  width: 50%;
+  float: left;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 20px 0;
+  padding-left: 8%;
+  background-color: rgba(255, 255, 255, .8);
+  border-top: 4px solid transparent;
+  transition: .3s all;
+}
+
+.ch.map .overmap .container>div:hover{
+  background-color: rgba(255, 255, 255, 1);
+  border-top: 4px solid #57689b;
+}
+
+.ch.map .overmap .container>div h3{
+  padding-bottom: 8px;
+}
+
+.ch.map .overmap .container>div p{
+  font-size: 12px;
 }
 
 .ch.map .overmap a{
   font-size: 13px;
-
+  text-decoration: none;
 }
 
 #mapitem{
-  height: 400px;
+  height: 500px;
   width: 100%;
 }
 
@@ -184,6 +243,34 @@ html {
   position: relative;
 }
 
+.ch.meta.live{
+  background-color: #fff;
+}
+
+.ch.meta .card{
+  line-height: 1.6em;
+}
+
+.ch.meta .card h2{
+  padding-bottom: 30px;
+}
+
+.ch.meta .card h2 i{
+  display: inline-block;
+  font-size: 40px;
+  color: #57689b;
+  width: 40px;
+  text-align: center;
+}
+
+.ch.meta .card h3{
+  line-height: 1.6em;
+}
+
+.ch.meta .card .list{
+  padding-top: 20px;
+}
+
 .ch.meta .feature li{
   box-sizing: border-box;
   list-style: none;
@@ -191,7 +278,6 @@ html {
   float: left;
   padding: 20px 5%;
   margin: 0 4% 30px 4%;
-  text-align: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .12);
   border-radius: 10px;
   font-size: 14px;
@@ -205,7 +291,6 @@ html {
 }
 
 .ch.meta p{
-  text-align: center;
   float: left;
   width: 50%;
   line-height: 2.5em;
@@ -216,20 +301,63 @@ html {
   height: 150px;
 }
 
-.bgdanmu{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
+.page_coming{
+  padding: 140px 0;
+  text-align: center;
 }
 
-.bgdanmu span{
-  position: absolute;
-  right: 0;
-  top: 0;
+.page_coming h1{
+  padding: 40px;
+}
+
+.footer{
+  background-color: #eee;
+  font-size: 14px;
+}
+
+.footer a{
+  color: initial;
+  text-decoration: none;
+}
+
+.footer .container{
+    position: relative;
+}
+
+.footer h3{
+  letter-spacing: .5em;
+  padding-bottom: 40px;
   font-size: 20px;
-  -webkit-animation: danmu 10s linear forwards;
+}
+
+.footer .meta .small{
+  font-size: 12px;
+  color: #888;
+  padding-top: 10px;
+}
+
+.page_about .group a{
+  color: initial;
+  text-decoration: none;
+}
+
+.page_about .group img.qrcode{
+  display: block;
+  width: 160px;
+  height: 160px;
+  float: left;
+  margin-right: 40px;
+}
+
+.page_about .group span{
+  display: block;
+  font-size: 20px;
+  line-height: 2em;
+}
+
+.page_about .group span.small{
+  font-size: 15px;
+  padding-top: 10px;
 }
 
 @-webkit-keyframes danmu{
@@ -254,35 +382,96 @@ html {
   .container{
     width: 96%;
     padding: 2%;
+    box-sizing: border-box;
+  }
+
+  .main .ch {
+    padding: 50px 0;
   }
   .map{
     width: 100%;
+  }
+
+  .ch.map{
+    padding: 0;
+  }
+
+  #mapitem{
+    height: 400px;
+  }
+
+  .ch.map .overmap .container{
+    padding: 0;
+  }
+
+  .ch.map .overmap .container>div{
+    padding-right: 0;
+     padding-left: 3%;
+  }
+
+  .ch.map .overmap .container>div h3{
+    font-size: 14px;
+  }
+
+
+
+  .ch.header img.logo{
+    width: 100%;
+    height: auto;
+  }
+
+  .leftbar .titlebox h1 span {
+    font-size: 20px;
   }
 
   .ch.meta p{
     width: auto;
     float: none;
   }
-  .main .ch {
-    padding: 50px 0;
-  }
 }
 
 .page_apply .pagetitle{
+  padding: 40px 0;
 }
 
 .page_apply .pagetitle .btn{
   display: inline-block;
   float: left;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 20px;
+  padding: 10px 20px;
   text-decoration: none;
   color: #fff;
+  background: #7588ba;
+  margin: 0 40px 20px 0;
+  transition: .3s all;
+}
+
+.page_apply .pagetitle .btn i{
+  font-size: 24px;
+}
+
+.page_apply .pagetitle .btn.current{
+  background: #3c4968;
+}
+
+.page_apply .pagetitle .btn:hover {
   background: #57689b;
-  margin-right: 40px;
 }
 
 .page_apply .pagetitle h1{
   line-height: 40px;
+}
+
+.page_apply .iframebox{
+  width: 100%;
+  height: 2000px;
+  -webkit-overflow-scrolling:touch;
+
+}
+
+.page_apply iframe{
+  overflow: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 2000px;
+  background-color:transparent;
 }
