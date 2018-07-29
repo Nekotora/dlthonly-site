@@ -360,6 +360,8 @@ html {
   padding-top: 10px;
 }
 
+
+
 @-webkit-keyframes danmu{
   0%{
     right: 0;
@@ -446,6 +448,16 @@ html {
 
 .page_apply .pagetitle{
   padding: 40px 0;
+}
+
+.page_apply h3 {
+  padding-bottom: 20px;
+}
+
+.page_apply .notice p {
+  padding-bottom: 20px;
+  line-height: 1.6em;
+  font-size: 14px;
 }
 
 .page_apply .pagetitle .btn{
