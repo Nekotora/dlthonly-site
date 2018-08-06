@@ -4,7 +4,7 @@
     "dev": "parcel dev src/index.pug --out-dir ./dist/ ",
     "watch": "parcel watch src/index.pug --out-dir ./dist/",
     "build": "parcel build src/index.pug --out-dir ./dist/ --public-url ./ --no-source-maps",
-    "clear": "rm -rf ./dist"
+    "clean": "rm -rf ./dist"
   },
   "dependencies": {
     "ionicons": "^4.2.5",

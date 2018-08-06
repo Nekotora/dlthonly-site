@@ -5,8 +5,23 @@ block header
   title 参展社团摊位 - 大连东方ProjectOnly / DLTHONLY
 
 block main
-  .page_ticket.page_coming
-    .ch.container.pagetitle.clear
+  .page_ticket.page_booth
+    .ch.container.article
+      h3 场地图
+      img(src="./source/img/map.jpg")
+  .page_coming
+    .container
+      .article.booth_detail
+        h3 参展社团/嘉宾
       img(src="./source/img/coming.svg")
       h1 少女祈祷中
       p 尽请期待
+  style.
+    .page_coming{
+      padding:0;
+      padding-bottom: 80px;
+    }
+    .booth_detail{
+      text-align: left;
+      padding-bottom: 50px;
+    }
