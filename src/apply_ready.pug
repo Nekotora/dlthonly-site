@@ -3,7 +3,7 @@ extends  ./base/layout.pug
 
 block header
   -  nav = "apply"
-  title 申请 - 大连东方ProjectOnly / DLTHONLY
+  title 申请 - 大连东方ProjectOnly / 大连THO
 
 block main
   .page_apply
@@ -26,6 +26,9 @@ block main
         p <span>摊位分配截止时间</span>2019.02初
         p <span>寄售申请截止时间</span>2019.02中旬
         p <span>寄售商品邮寄</span>活动开始前10天
-      .pagetitle
+        br
+        p 
+          a(href="./about.pug") 同时请加入社团联络群 (QQ群：551807982)
+      .pagetitle.clear
         a.btn(href="./apply_booth.pug") <i class="icon ion-md-basket"></i> 大连THO场贩/寄售摊位申请
         a.btn.disable(href="javascript:alert('申请暂未开放，尽请期待')") <i class="icon ion-md-beer"></i> 大连THO工作人员申请
