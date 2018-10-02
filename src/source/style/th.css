@@ -62,16 +62,27 @@ html {
   height: 100%;
   width: 100%;
   pointer-events: none;
+  background-size: cover;
 }
 
-.leftbar .background {
-  background: url(../img/intro_bg.jpg);
+.leftbar .background.bg {
+  background: url(../img/th_bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.leftbar .background.figma {
-  background-image: url(../img/intro_figma.png);
+.leftbar .background.figma_left {
+  background-image: url(../img/th_left.png);
+  background-position: center center;
+}
+
+.leftbar .background.figma_right {
+  background-image: url(../img/th_right.png);
+  background-position: center center;
+}
+
+.leftbar .background.front {
+  background-image: url(../img/th_front.png);
   background-position: center center;
 }
 
@@ -143,6 +154,15 @@ html {
   background-color: #57689b;
   color: #FFF;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.ch.header>*{
+  position: relative;
+  z-index: 2;
 }
 
 .ch.header img.logo{

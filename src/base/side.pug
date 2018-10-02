@@ -1,12 +1,14 @@
 .leftbar
       .scene#scene
-        .background(data-depth="0.2",style="z-index:5")
-        .background.figma(data-depth="0.4",style="z-index:6")
-        .flow(data-depth="0.5",style="z-index:7")
+        .background.bg(data-depth="0.1",style="z-index:3")
+        .background.figma_left(data-depth="0.3",style="z-index:6")
+        .background.figma_right(data-depth="0.45",style="z-index:6")
+        .background.front(data-depth="0.7",style="z-index:7")
+        .flow(data-depth="0.8",style="z-index:8")
           img(src="./source/img/g_logo.png")
-        .shadow(style="z-index:8")
+        .shadow(style="z-index:9")
           .inner
-        .text(data-depth="0.6",style="z-index:9")
+        .text(data-depth="0.8",style="z-index:10")
           .titlebox
             h1 相逢于幻想乡<br><span>属于大连的东方ProjectOnly</span>
             h2 TouHou Only / 东方 Live Party<br>大连 · 2019.02.23
