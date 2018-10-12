@@ -264,7 +264,57 @@ html {
   position: relative;
 }
 
-.ch.meta.live{
+.ch.countdown{
+  text-align: center;
+}
+
+.ch.countdown #countdown>div{
+  display: inline-block;
+  width: 100px;
+}
+
+.ch.countdown #countdown>div span{
+  display: block;
+  font-size: 50px;
+  line-height: 1.3em;
+}
+
+.ch.countdown #countdown>div span.i{
+  font-size: 16px;
+  opacity: .3;
+}
+
+.countdown p{
+  font-size: 16px;
+  opacity: .3;
+  letter-spacing: 1.5em;
+}
+
+.countdown .pbar{
+  position: relative;
+  width: 70%;
+  height: 4px;
+  text-align: center;
+  margin: 15px 15% 20px 15%;
+  background-color: #e5e5e5;
+}
+
+.countdown .pbar .in{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  background-color: #4780cd;
+  height: 4px;
+  width: 100%;
+  transition: 1s all linear;
+}
+
+/* .ch.meta.live{
+  background-color: #fff;
+} */
+
+.ch.meta.act {
   background-color: #fff;
 }
 
@@ -361,6 +411,10 @@ html {
   background-color: #f5f5f5;
 }
 
+.page_about .article{
+  margin-bottom: 50px;
+}
+
 .page_about .group a{
   display: block;
   color: initial;
@@ -423,6 +477,11 @@ html {
 
 .article img{
   max-width: 100%;
+}
+
+.article .small{
+  font-size: 13px;
+  color: #999;
 }
 
 
@@ -514,6 +573,20 @@ html {
   }
   .page_about .group a .t{
     margin-left: 0;
+  }
+
+  .ch.countdown #countdown>div {
+    width: auto;
+    padding: 0 8px;
+  }
+
+  .ch.countdown #countdown>div span {
+    font-size: 40px;
+  }
+
+  .countdown p {
+    letter-spacing: .8em;
+    font-size: 14px;
   }
 }
 
