@@ -26,20 +26,19 @@ html(lang="en")
           img.logo(src="./source/img/logo2.png")
           .nav
             - var currentNav = nav ? nav : ''
-            a#meta(href="./index.pug" class=(currentNav == 'meta') ?'current': '') 活动信息
-            a#booth(href="./booth.pug" class=(currentNav == 'booth') ?'current': '') 参展嘉宾/摊位
-            a#apply(href="./apply_ready.pug" class=(currentNav == 'apply') ?'current': '') 参展摊位/NPC报名
-            a#ticket(href="./ticket.pug" class=(currentNav == 'ticket') ?'current': '') 票务相关
-            a#about(href="./about.pug" class=(currentNav == 'about') ?'current': '') 关于/联系我们
+            a#meta(href="./index.pug" class=(currentNav == 'meta') ?'current': '') 主页
+            a#booth(href="./booth.pug" class=(currentNav == 'booth') ?'current': '') 嘉宾摊位
+            a#apply(href="./apply_ready.pug" class=(currentNav == 'apply') ?'current': '') 活动报名
+            a#ticket(href="./ticket.pug" class=(currentNav == 'ticket') ?'current': '') 门票周边
+            a#about(href="./about.pug" class=(currentNav == 'about') ?'current': '') 关于我们
+            a#jp(href="./jp.pug" class=(currentNav == 'jp') ?'current': '') 日本語
       block main
       .ch.footer
         .container
           h3 愿与你相逢于幻想乡
           .meta
-            p 大连THOnly筹办组 / 大连东方Project同好会
-            p Illustraor 橘前辈 / 玲⑨
-            p Logo designer 阿时
-            p Website by <a href="http://flag.moe/?from=dlthonly">Nekotora</a> @ <a href="http://nyanket.com/?from=dlthonly">Nyanket!喵通贩</a>
-             - var time = (new Date()).toISOString()
-            p.small 辽ICP备17001495号-2<span style="color:#bbb"> / Build at #{time}</span>
+            .links
+              a(href="./about.pug") Staff / 活动须知与声明
+              a(href="./jp.pug") 海外サークル出展特設ページ
+            p.small 辽ICP备17001495号-2<span style="color:#bbb"> / Build at #{(new Date()).toISOString()}</span>
       <script type="text/javascript" src="//tajs.qq.com/stats?sId=65951740" charset="UTF-8"></script>

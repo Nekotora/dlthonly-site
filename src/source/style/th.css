@@ -407,6 +407,14 @@ html {
   padding-top: 10px;
 }
 
+.footer .meta .links a{
+  padding-right: 30px;
+}
+
+.footer .meta .links a:hover{
+  color: #57689b;
+}
+
 .page_about{
   background-color: #f5f5f5;
 }
@@ -473,6 +481,10 @@ html {
 
 .page_booth h3{
   font-size: 24px;
+}
+
+.article h2{
+  margin-bottom: 1em;
 }
 
 .article img{
@@ -601,7 +613,6 @@ html {
 .article p {
   padding-bottom: 20px;
   line-height: 1.6em;
-  font-size: 14px;
 }
 
 .page_apply .pagetitle .btn{
@@ -642,6 +653,10 @@ html {
 
 }
 
+.page_apply .article{
+  font-size: 14px;
+}
+
 .page_apply iframe{
   overflow: auto;
   overflow-x: hidden;
@@ -663,4 +678,13 @@ html {
 .apply_process p span{
   display: inline-block;
   width: 180px;
+}
+
+.page_about .stafflist{
+  line-height: 2.5em;
+}
+
+.page_about .stafflist b{
+  display: inline-block;
+  width: 140px;
 }
