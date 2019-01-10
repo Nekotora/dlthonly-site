@@ -9,28 +9,29 @@ block main
     .container.clear
       .card
         h2 <i class="icon ion-md-beer"></i> 东方 Project Only 展会 幻想空闻集——风海小祭
-        h3 2019.02.23 09:00-16:00（暂定）
+        h3 2019.02.23 09:00-16:00
         h3 大连心悦酒店5L大厅
         .list.clear
           p 属于大连东方爱好者的盛宴！
           p 大连的东方 Project Only 同人展
+          p 来自中日韩，超过30家社团参展
           p 东方原作游戏展示
           p 东方同人作品贩售及场贩
           p 来自全国各地同人社团的精美作品
           p 还有奖品丰厚的现场抽奖环节
           p 其他精彩活动敬请期待
           p ... ...
-  //- .ch.meta.live
-  //-   .container.clear
-  //-     .card
-  //-       h2 <i class="icon ion-md-musical-note"></i> 东方 Project Live Party
-  //-       h3 2019.02.23 18:00-20:00（暂定）
-  //-       h3 大连秀外文化剧场
-  //-       .list.clear
-  //-         p 东方同人社团倾情演出！
-  //-         p 与国内东方嘉宾零距离接触！
-  //-         p 感受精彩的东方之夜！
-  //-         p ... ...
+  .ch.meta.live
+    .container.clear
+      .card
+        h2 <i class="icon ion-md-musical-note"></i> 东方 Live Party
+        h3 2019.02.23 17:00-19:00
+        h3 花满都酒吧
+        .list.clear
+          p 东方同人社团倾情演出！
+          p 与国内东方嘉宾零距离接触！
+          p 感受精彩的东方之夜！
+          p ... ...
   .ch.countdown
     .container
       #countdown
@@ -40,14 +41,14 @@ block main
   .ch.map.clear#map
     .overmap
       .container.clear#map_control
-        .left#point_a(style="width:100%;text-align:center;padding-left:0;padding-right:0;")
+        .left#point_a
           h3 <i class="icon ion-md-pin"></i> 东方 Project Only 展会
           p 大连心悦酒店5L大厅
           p 大连市中山区人民路81号
-        //- .right#point_b
-        //-   h3 <i class="icon ion-md-pin"></i> 东方 Project Live Party
-        //-   p 大连秀外文化剧场
-        //-   p 辽宁省大连市西岗区唐山街
+        .right#point_b
+          h3 <i class="icon ion-md-pin"></i> 东方 Project Live Party
+          p 花满都酒吧
+          p 大连中山区昆明街50号
     #mapitem
     script(type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=64665E5BCEdfb17ec826f5f890f07c57")
     script(src="./source/script/index.js")

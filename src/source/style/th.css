@@ -25,7 +25,7 @@ html {
 }
 
 .container{
-  width: 600px;
+  width: 730px;
   margin: 0 auto;
 }
 
@@ -47,7 +47,7 @@ html {
 
 .leftbar{
   position: fixed;
-  width: 40%;
+  width: 36%;
   height: 100%;
   top: 0;
   left: 0;
@@ -141,7 +141,7 @@ html {
   position: absolute;
   right: 0;
   top: 0;
-  width: 60%;
+  width: 64%;
   background-color: #fafafa;
   min-height: 100%;
 }
@@ -265,6 +265,7 @@ html {
 }
 
 .ch.countdown{
+  background-color: #fff;
   text-align: center;
 }
 
@@ -497,6 +498,89 @@ html {
 }
 
 
+.guestlist {
+  text-align: left;
+  column-count: 2;
+  column-gap: 20px;
+}
+
+.guestlist a{
+  color: initial;
+  text-decoration: none;
+  display: block;
+}
+
+.guestlist .item {
+  display: block;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  break-inside: avoid;
+}
+
+.guestlist .item.highlight h4{
+  color: #4780cd;
+  animation: highlight .5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes highlight {
+  0% {
+    transform: translateY(-1px) rotate(-2deg)
+  }
+
+  100% {
+    transform: translateY(1px) rotate(2deg)
+  }
+}
+
+
+.guestlist .item img {
+  display: inline-block;
+  float: left;
+  width: 80px;
+  margin-right: 20px;
+  background-color: #eee;
+}
+
+.guestlist .item .content{
+  margin-left: 100px;
+}
+
+.guestlist .item h4{
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  margin-top: 6px;
+}
+
+.guestlist .item .tags span{
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  background: #2196F3;
+  color: #fff;
+  font-size: 12px;
+  padding: 0 4px;
+  margin: 0 10px 6px 0;
+  border-radius: 2px;
+}
+
+.guestlist .item .tags span.area{
+  background-color: #FF4081;
+}
+
+.guestlist .item .tags span.type {
+  background-color: #388E3C;
+}
+
+.guestlist .item p{
+  font-size: 13px;
+  color: #666;
+}
+
 
 @-webkit-keyframes danmu{
   0%{
@@ -507,7 +591,7 @@ html {
   }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1050px) {
+@media screen and (min-width: 800px) and (max-width: 1050px) {
   .leftbar{
     position: relative;
     top: 0;
@@ -521,7 +605,7 @@ html {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .leftbar{
     position: relative;
     width: 100%;
@@ -599,6 +683,21 @@ html {
   .countdown p {
     letter-spacing: .8em;
     font-size: 14px;
+  }
+
+  .guestlist{
+    text-align: center;
+    column-gap: 16px;
+  }
+
+  .guestlist .item img{
+    float: none;
+    margin-right: 0;
+  }
+
+  .guestlist .item .content{
+    float: none;
+    margin-left: 0;
   }
 }
 
