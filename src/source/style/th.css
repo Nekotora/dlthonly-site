@@ -29,6 +29,20 @@ html {
   margin: 0 auto;
 }
 
+.columns {
+  box-sizing: border-box;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.column {
+  box-sizing: border-box;
+  float: left;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 33.333%
+}
+
 .hello{
   height: 100%;
   width: 100%;
@@ -581,6 +595,188 @@ html {
   color: #666;
 }
 
+.page_apply .pagetitle {
+  padding: 40px 0;
+}
+
+.article h3 {
+  padding-bottom: 20px;
+}
+
+.article p {
+  padding-bottom: 20px;
+  line-height: 1.6em;
+}
+
+.page_apply .pagetitle .btn {
+  display: inline-block;
+  float: left;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  background: #7588ba;
+  margin: 0 40px 20px 0;
+  transition: .3s all;
+}
+
+.page_apply .pagetitle .btn i {
+  font-size: 24px;
+}
+
+.page_apply .pagetitle .btn.current {
+  background: #3c4968;
+}
+
+.page_apply .pagetitle .btn:hover {
+  background: #57689b;
+}
+
+.page_apply .pagetitle .btn.disable {
+  background: #bbb;
+}
+
+.page_apply .pagetitle h1 {
+  line-height: 40px;
+}
+
+.page_apply .iframebox {
+  width: 100%;
+  height: 2000px;
+  -webkit-overflow-scrolling: touch;
+
+}
+
+.page_apply .article {
+  font-size: 14px;
+}
+
+.page_apply iframe {
+  overflow: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 2000px;
+  background-color: transparent;
+}
+
+
+.apply_process {
+  padding: 40px 0 20px 0;
+  color: #666;
+}
+
+.apply_process p {
+  line-height: 1em;
+}
+
+.apply_process p span {
+  display: inline-block;
+  width: 180px;
+}
+
+.page_about .stafflist {
+  line-height: 2.5em;
+}
+
+.page_about .stafflist b {
+  display: inline-block;
+  width: 140px;
+}
+
+.page_ticket .container {
+  margin-bottom: 50px;
+}
+
+.page_ticket .pricelist .ticket {
+  display: inline-block;
+  background-color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  justify-content: space-between;
+  align-items: stretch;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, .08);
+  border-radius: 6px;
+  height: 200px;
+  width: 100%;
+  position: relative;
+}
+
+.page_ticket .pricelist .ticket h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  height: 120px;
+}
+
+.page_ticket .pricelist .ticket h3 span {
+  display: block;
+}
+
+.page_ticket .pricelist .ticket h3 span.price {
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+.page_ticket .pricelist .ticket span.onsite {
+  font-size: 12px;
+  opacity: .3;
+}
+
+.page_ticket .links {
+  margin-bottom: 100px;
+}
+
+.page_ticket .links a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3c4968;
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 5px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, .08);
+  transition: .3s all;
+}
+
+.page_ticket .links a:hover {
+  box-shadow: 0 5 14px rgba(0, 0, 0, .2);
+  transform: translateY(-4px);
+}
+
+.page_ticket .links a img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  opacity: .38;
+  transform: rotate(20deg);
+  transition: .3s all;
+}
+
+.page_ticket .links a:hover img {
+  transform: rotate(9deg);
+  width: 85px;
+  height: 85px;
+}
+
+.page_ticket .items .item {
+  margin: 50px 0;
+  line-height: 2;
+}
+
+.page_ticket .items .item h4 {
+  width: 150px;
+  float: left;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
+.page_ticket .items .item .content {
+  margin-left: 170px;
+}
+
 
 @-webkit-keyframes danmu{
   0%{
@@ -699,91 +895,22 @@ html {
     float: none;
     margin-left: 0;
   }
-}
 
-.page_apply .pagetitle{
-  padding: 40px 0;
-}
+  .columns .column{
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-.article h3 {
-  padding-bottom: 20px;
-}
+  .page_ticket .links {
+    margin-bottom: 0px;
+  }
 
-.article p {
-  padding-bottom: 20px;
-  line-height: 1.6em;
-}
+    .page_ticket .items .item h4{
+      float: none;
+      width: 100%;
+    }
 
-.page_apply .pagetitle .btn{
-  display: inline-block;
-  float: left;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #fff;
-  background: #7588ba;
-  margin: 0 40px 20px 0;
-  transition: .3s all;
-}
-
-.page_apply .pagetitle .btn i{
-  font-size: 24px;
-}
-
-.page_apply .pagetitle .btn.current{
-  background: #3c4968;
-}
-
-.page_apply .pagetitle .btn:hover {
-  background: #57689b;
-}
-
-.page_apply .pagetitle .btn.disable {
-  background: #bbb;
-}
-
-.page_apply .pagetitle h1{
-  line-height: 40px;
-}
-
-.page_apply .iframebox{
-  width: 100%;
-  height: 2000px;
-  -webkit-overflow-scrolling:touch;
-
-}
-
-.page_apply .article{
-  font-size: 14px;
-}
-
-.page_apply iframe{
-  overflow: auto;
-  overflow-x: hidden;
-  width: 100%;
-  height: 2000px;
-  background-color:transparent;
-}
-
-
-.apply_process{
-  padding: 40px 0 20px 0;
-  color: #666;
-}
-
-.apply_process p{
-  line-height: 1em;
-}
-
-.apply_process p span{
-  display: inline-block;
-  width: 180px;
-}
-
-.page_about .stafflist{
-  line-height: 2.5em;
-}
-
-.page_about .stafflist b{
-  display: inline-block;
-  width: 140px;
+  .page_ticket .items .item .content{
+    margin: 0;
+  }
 }

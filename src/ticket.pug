@@ -5,8 +5,55 @@ block header
   title 票务相关 - 大连东方ProjectOnly / 大连THO
 
 block main
-  .page_ticket.page_coming
-    .ch.container.pagetitle.clear
-      img(src="./source/img/coming.svg")
-      h1 少女祈祷中
-      p 尽请期待
+  .ch.page_ticket
+    .container.pricelist.clear
+      .columns
+        .column
+          .ticket
+            h3(style="color: #52a9ce;")
+              span 东方ProjectOnly<br>日场预售票
+              span.price ￥60
+            span.onsite 活动当日现场门票 ￥70
+        .column
+          .ticket
+            h3(style="color: #e55075;")
+              span 东方LiveParty<br>夜场预售票
+              span.price ￥160
+            span.onsite 活动当日现场门票 ￥199
+        .column
+          .ticket
+            h3(style="color: #4ece7f;")
+              span 东方LiveParty<br>东方ProjectOnly联票
+              span.price ￥220
+            span.onsite 【已售罄】联票限量，无现场票
+    .container.links.clear
+      .columns
+        .column
+          a(href="https://m.nyanket.com/event/dltho",style="background-color: #52a9ce;") 官方喵通贩电子票<img src="./source/img/nyanket.png" />
+        .column
+          a(href="https://show.bilibili.com/platform/detail.html?id=16314",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./source/img/bilibili.png" />
+        .column
+          a(href="https://show.bilibili.com/platform/detail.html?id=16411",style="background-color: #e55075;") 夜场live Bilibili会员购电子票<img src="./source/img/bilibili.png" />
+    .container.items
+      .item
+        h4 门票本体
+        .content
+          p * 门票是活动的唯一的入场凭证，其余随票物品均不可作为门票使用，请妥善保管。
+      .item
+        h4 随票赠品
+        .content
+          p 大连东方ProjectOnly定制信封
+          p 活动邀请函
+          p * 电子票用户在现场入口处兑换实体门票入场。
+      .item
+        h4 纪念卡
+        .content
+          p DLTHO纪念卡（普通Ver.）
+          p DLTHO纪念卡（LivePartyVer.）
+          p DLTHO纪念卡（联票限定Ver.）
+          p * 纪念卡不可作为门票使用。
+      .item
+        h4 活动场刊
+        .content
+          p 大连东方ProjectOnly活动场刊
+          p * 活动场刊将在活动现场发放，凭门票领取。
