@@ -2880,7 +2880,7 @@ minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
   resolved "http://registry.npm.taobao.org/minimalistic-crypto-utils/download/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
 
-minimatch@^3.0.2, minimatch@^3.0.4:
+minimatch@3.0.4, minimatch@^3.0.2, minimatch@^3.0.4:
   version "3.0.4"
   resolved "http://registry.npm.taobao.org/minimatch/download/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=
@@ -3256,12 +3256,13 @@ parallax-js@^3.1.0:
     object-assign "^4.1.1"
     raf "^3.3.0"
 
-parcel-plugin-static-files-copy@^1.2.4:
-  version "1.2.4"
-  resolved "http://registry.npm.taobao.org/parcel-plugin-static-files-copy/download/parcel-plugin-static-files-copy-1.2.4.tgz#a05add8e0f5efd3164b16e2817b797936da531c9"
-  integrity sha1-oFrdjg9e/TFksW4oF7eXk22lMck=
+parcel-plugin-static-files-copy@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/parcel-plugin-static-files-copy/-/parcel-plugin-static-files-copy-2.0.0.tgz#7e68552df7bc7e427ede15c7b5dc0d0a9961c843"
+  integrity sha512-Rh8pnKYAYXpoSseXfw2M+tNZgilMmONB1AQgqWqIicEWgUG+Bmosa7QnFrCZaAeN46aCn/o0BP0mcOvxUTtDtA==
   dependencies:
     file-system "2.2.2"
+    minimatch "3.0.4"
     path "0.12.7"
 
 parcel@^1.9.7:
