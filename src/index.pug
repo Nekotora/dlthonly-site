@@ -5,50 +5,144 @@ block header
   title 大连东方ProjectOnly / 大连THO
 
 block main
-  .ch.meta.act
-    .container.clear
-      .card
-        h2 <i class="icon ion-md-beer"></i> 东方 Project Only 展会 幻想空闻集——风海小祭
-        h3 2019.02.23 09:00-16:00
-        h3 大连心悦酒店5L大厅
-        .list.clear
-          p 属于大连东方爱好者的盛宴！
-          p 大连的东方 Project Only 同人展
-          p 来自中日韩，超过30家社团参展
-          p 东方原作游戏展示
-          p 东方同人作品贩售及场贩
-          p 来自全国各地同人社团的精美作品
-          p 还有奖品丰厚的现场抽奖环节
-          p 其他精彩活动敬请期待
-          p ... ...
-  .ch.meta.live
-    .container.clear
-      .card
-        h2 <i class="icon ion-md-musical-note"></i> 东方 Live Party
-        h3 2019.02.23 17:00-19:00
-        h3 花满都酒吧
-        .list.clear
-          p 东方同人社团倾情演出！
-          p 与国内东方嘉宾零距离接触！
-          p 感受精彩的东方之夜！
-          p ... ...
-  .ch.countdown
-    .container
-      #countdown
-      .pbar#countdownbar
-        .in
-      p 距离前往幻想乡还有
-  .ch.map.clear#map
-    .overmap
-      .container.clear#map_control
-        .left#point_a
-          h3 <i class="icon ion-md-pin"></i> 东方 Project Only 展会
-          p 大连心悦酒店5L大厅
-          p 大连市中山区人民路81号
-        .right#point_b
-          h3 <i class="icon ion-md-pin"></i> 东方 Project Live Party
-          p 花满都酒吧
-          p 大连中山区昆明街50号
-    #mapitem
+  .page.page-index
+    .setinfo
+      .container.card
+        h2 东方风海例祭<sup>02</sup>
+        h4 大连东方ProjectOnly02
+        h4 2020.02.08 - 大连心悦酒店5L大厅
+        .nav
+    .ch.story
+      .container
+        .card
+          img.bg(src="story.png")
+          .content
+            p 滨城的幻想之风，<br>人与妖怪的世界，<br>缘起于未完的画卷，<br>第二届，属于大连的东方ProjectOnly，<br>东方风海例祭，<br>在幻想乡期待你的到来！
+    .ch.booth
+      .container
+        .title-box
+          h2 现场活动
+    .ch.booth
+      .container
+        .title-box
+          h2 参展社团
+        .content.clear
+          .guestlist#guestlist
+            p(v-if="!loaded") Loading...
+            a(href="#",v-for="item in list")
+              .item(:class="{highlight: item.highlight}")
+                img(:src="item.image?'https://dlthonly.fmoe.cn/logo/'+item.image:'https://dlthonly.fmoe.cn/logo/na.png'")
+                .content
+                  h4 {{item.guest}}
+                  .tags
+                    span.area {{item.area}}
+                    span.type {{item.type}}
+    .ch.booth
+      .container
+        .title-box
+          h2 门票周边
+    .ch.apply
+      .container
+        .title-box
+          h2 参展报名
+        .content
+          .card
+            a(href="#")
+              .booth-apply
+                .big-btn
+                  p 场贩/寄售摊位申请
+                    span 开启中，点击了解详细参展规则
+                .content(style="background-image: url(booth-apply.jpg)")
+            a(href="#")
+              .booth-apply.npc-apply
+                .big-btn
+                  p NPC/筹备组申请
+                    span 开启中，点击了解筹备组申请说明
+                .content(style="background-image: url(npc-apply.jpg)")
+    .ch.location
+      .container
+        .title-box
+          h2 活动地点
+        .content
+          .map
+            #mapitem
+          .info
+            h4 大连心悦酒店5L大厅
+            p 大连市中山区人民路81号
+            p 
+    .ch.booth
+      .container
+        .title-box
+          h2 协力 & 感谢
+        .content
+
     script(type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=64665E5BCEdfb17ec826f5f890f07c57")
     script(src="./source/script/index.js")
+    script(src="./source/script/vue.min.js")
+  script.
+    $(function(){
+      $(window).scroll(function(event){
+        var scrollTop = $(window).scrollTop();
+        scrollTop>2 ? $(".intro").addClass('off') : $(".intro").removeClass('off');
+      });
+    })
+    var list = [
+      {"guest":"幽闭星光","tags":"","area":"日本","type":"直参","image":"yuuhei satellite.jpg","desc":"","highlight": true},
+      {"guest":"少女分形","tags":"","area":"日本","type":"直参","image":"shoujo fractal.jpg","desc":"","highlight": true},
+      {"guest":"魂音泉","tags":"","area":"日本","type":"直参","image":"tamaonsen.jpg","highlight": true},
+      {"guest":"求文社","tags":"周边 同人本","area":"中国","type":"寄售","image":"QiuWen.jpg","desc":""},
+      {"guest":"疯帽子茶会","tags":"音乐","area":"中国","type":"直参","image":"Mad hatter tea.jpg","desc":""},
+      {"guest":"赤音羽","tags":"音乐","area":"中国","type":"寄售","image":"ChiYinYu.jpg","desc":""},
+      {"guest":"幻想诗篇Xanadu Canto","tags":"音乐","area":"中国","type":"直参","image":"Xanadu_Canto.jpg","desc":""},
+      {"guest":"幻想跃迁实验室","tags":"音乐 文字","area":"中国","type":"直参","image":"Lab LOF.jpg","desc":""},
+      {"guest":"Bunny rhyTHm","tags":"音乐","area":"中国","type":"直参","image":"bunny_rhyTHm.jpg","desc":""},
+      {"guest":"第零研究院","tags":"游戏 周边 文字","area":"中国","type":"直参","image":"zero.jpg","desc":""},
+      {"guest":"秋空Agrotech","tags":"文字","area":"中国","type":"直参","image":"Agrotech.jpg","desc":""},
+      {"guest":"醉梦笔笺","tags":"文字","area":"中国","type":"直参","image":"zmbj.jpg","desc":""},
+      {"guest":"陆柒团","tags":"周边","area":"中国","type":"寄售","image":"The Six Seven.jpg","desc":""},
+      {"guest":"AbsoluteZero","tags":"周边","area":"日本","type":"直参","image":"AbsoluteZero.jpg","desc":""},
+      {"guest":"酢.Ｍ.Ａ.Ｐ.","tags":"周边","area":"日本","type":"直参","image":"MAP.jpg","desc":""},
+      {"guest":"すなめりドリル","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
+      {"guest":"悶KID","tags":"周边","area":"日本","type":"直参","image":"KID.jpg","desc":""},
+      {"guest":"ぱいそんきっど","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
+      {"guest":"焼き鳥フェニックス","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
+      {"guest":"东方寓梦粹","tags":"文字","area":"中国","type":"直参","image":"YMC.jpg","desc":""},
+      {"guest":"XP社","tags":"卡牌","area":"中国","type":"直参","image":"XP.jpg","desc":""},
+      {"guest":"Alice手工坊","tags":"周边 同人本 服饰","area":"中国","type":"直参","image":"Alice.jpg","desc":""},
+      {"guest":"墨斯卡林之翼","tags":"周边 同人本","area":"中国","type":"寄售","image":"MW.jpg","desc":""},
+      {"guest":"CREST","tags":"音乐","area":"日本","type":"直参","image":"Crest.jpg","desc":""},
+      {"guest":"SJS团","tags":"周边","area":"中国","type":"直参","image":"sjs.jpg","desc":""},
+      {"guest":"囧仙子通贩","tags":"","area":"中国","type":"直参","image":"jxz.jpg","desc":""},
+      {"guest":"Rnote","tags":"","area":"日本","type":"代理寄售","image":"rnote.jpg","desc":""},
+      {"guest":"THB梦缘社","tags":"音乐","area":"中国","type":"直参","image":"THB.jpg","desc":""},
+      {"guest":"京都幻想剧团","tags":"音乐 动画","area":"中国","type":"直参","image":"kyoto fantasy troupe.jpg","desc":""},
+      {"guest":"幻奏盛宴","tags":"音乐","area":"中国","type":"直参","image":"touhou symphony .jpg","desc":""},
+      {"guest":"AQUA STYLE","tags":"游戏","area":"日本","type":"代理寄售","image":"AQUA STYLE.jpg","desc":""},
+      {"guest":"蛛网之财商团","tags":"","area":"韩国","type":"直参","image":"kumono_ie.jpg","desc":""},
+      {"guest":"Kross.ProJecT","tags":"","area":"韩国","type":"直参","image":"Kross.ProJecT.jpg","desc":""},
+      {"guest":"IRON Attack","tags":"音乐","area":"日本","type":"直参","image":"IRON ATTACK.jpg","desc":""},
+      {"guest":"纽约花残月","tags":"音乐","area":"中国","type":"代理寄售","image":"Hana Nekori Tsuki.jpg","desc":""},
+      {"guest":"蓬莱玛格特洛依德梦乐团","tags":"音乐","area":"中国","type":"寄售","image":"hourai.jpg","desc":""},
+      {"guest":"TsuBaKi","tags":"音乐","area":"中国","type":"直参","image":"TsuBaKi.jpg","desc":""},
+      {"guest":"幻想虚照","tags":"音乐","area":"中国","type":"寄售","image":"HXXZ.jpg","desc":""},
+      {"guest":"ジャージと愉快な仲間たち","tags":"音乐","area":"日本","type":"直参","image":"bellwo.jpg","desc":""},
+      {"guest":"TAMUSIC","tags":"音乐","area":"日本","type":"直参","image":"TAMUSIC.jpg","desc":""},
+      {"guest":"沈阳THOnly","tags":"音乐/周边","area":"中国","type":"直参","image":"SYTHO.jpg","desc":""},
+      {"guest":"Matthiola Records","tags":"音乐","area":"中国","type":"直参","image":"Matthiola Records.jpg","desc":""},
+      {"guest":"Yonder Voice","tags":"音乐","area":"中国","type":"直参","image":"Yonder Voice.jpg","desc":""},
+      {"guest":"幻梦缘起","tags":"同人本 周边","area":"中国","type":"直参","image":"HMYQ.jpg","desc":""},
+      {"guest":"隙间月台","tags":"","area":"中国","type":"寄售","image":"xjyt.jpg","desc":""},
+      {"guest":"NFT conFuoco orchestra","tags":"","area":"中国","type":"寄售","image":"nfto.jpg","desc":""},
+    ];
+    var app = new Vue({
+      el: '#guestlist',
+      data: {
+        list: list,
+        loaded: true
+      },
+      mounted: function(){
+      },
+      methods: {
+        // todo: filter
+      }
+    })

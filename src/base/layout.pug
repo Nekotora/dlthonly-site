@@ -6,6 +6,7 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="./source/style/ionicons.min.css")
     link(rel="stylesheet", href="./source/style/th.css")
+    script(src="./source/script/jquery.min.js")
     script(src="./source/script/app.js")
     script(src="./source/script/apply.js")
     meta(name="description" content="愿与你相逢于幻想乡，首届大连东方ProjectOnly，幻想空闻集——风海小祭！")
@@ -19,19 +20,22 @@ html(lang="en")
       gtag('js', new Date());
       gtag('config', 'UA-123043996-1');
   body
-    include ./side.pug
+    .intro
+      .background(style="background-image: url(intro.jpg)")
+        video.bg-video(src="dltho_indexbg.mp4", autoplay="autoplay", loop="loop")
+      .background.bg-cover(style="background-image: url(intro-blur.jpg)")
+      .background.bg-title
+      .background.bg-mask
+    //- .header
+    //-   .container.clear
+    //-     .nav
+    //-       a#meta(href="./index.pug" class=(currentNav == 'meta') ?'current': '') 主页
+    //-       a#booth(href="./booth.pug" class=(currentNav == 'booth') ?'current': '') 嘉宾摊位
+    //-       a#apply(href="./apply_ready.pug" class=(currentNav == 'apply') ?'current': '') 活动报名
+    //-       a#ticket(href="./ticket.pug" class=(currentNav == 'ticket') ?'current': '') 门票周边
+    //-       a#about(href="./about.pug" class=(currentNav == 'about') ?'current': '') 关于我们
+    //-       a#jp(href="./jp.pug" class=(currentNav == 'jp') ?'current': '') 日本語
     .main 
-      .ch.header
-        .container.clear
-          img.logo(src="./source/img/logo2.png")
-          .nav
-            - var currentNav = nav ? nav : ''
-            a#meta(href="./index.pug" class=(currentNav == 'meta') ?'current': '') 主页
-            a#booth(href="./booth.pug" class=(currentNav == 'booth') ?'current': '') 嘉宾摊位
-            a#apply(href="./apply_ready.pug" class=(currentNav == 'apply') ?'current': '') 活动报名
-            a#ticket(href="./ticket.pug" class=(currentNav == 'ticket') ?'current': '') 门票周边
-            a#about(href="./about.pug" class=(currentNav == 'about') ?'current': '') 关于我们
-            a#jp(href="./jp.pug" class=(currentNav == 'jp') ?'current': '') 日本語
       block main
       .ch.footer
         .container
