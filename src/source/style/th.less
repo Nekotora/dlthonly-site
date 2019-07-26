@@ -42,12 +42,15 @@ html {
 }
 
 .ch{
-  padding: 50px 0;
+  padding: 65px 0;
 }
 
 .main,
 .page-index{
   margin-top: 70vh;
+  position: relative;
+  z-index: 10;
+  color: #fff;
 }
 
 a,a:link{
@@ -68,7 +71,7 @@ a,a:link{
 
 .title-box{
   font-size: 24px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .loading{
@@ -127,7 +130,8 @@ a,a:link{
     top: initial;
     bottom: 0;
     height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0), rgba(50,50,80,.8)); 
+    //background: linear-gradient(to top, rgba(0,0,0,0), rgba(50,50,80,.8)); 
+    background-color: rgba(0,0,0, 0.4);
     z-index: -3;
     opacity: 0;
   }
@@ -145,12 +149,6 @@ a,a:link{
       opacity: 1;
     }
   }
-}
-
-.page{
-  position: relative;
-  z-index: 10;
-  color: #fff;
 }
 
 .page-index{
@@ -171,8 +169,43 @@ a,a:link{
   }
   .ch.story{
     position: relative;
+    margin-top: 100px;
+    .background{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 600px;
+      z-index: 1;
+    }
+    .background:after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 600px;
+      background-color: rgba(0,0,0,.5);
+    }
+    
+    .background>div{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-size: cover;
+      transition: .8s all;
+    }
+    .background > div.active{
+      opacity: 1;
+    }
     img{
-      width: 700px;
+      position: relative;
+      width: 750px;
+      z-index: 5;
     }
     .content{
       position: absolute;
@@ -180,6 +213,7 @@ a,a:link{
       bottom: 10%;
       background-color: rgba(94,80,158, 0.8);
       padding: 40px;
+      z-index: 10;
     }
     p{
       font-size: 20px;
@@ -284,6 +318,189 @@ a,a:link{
       .big-btn{
         background-color: rgba(220, 86, 86, 0.3);
       }
+    }
+  }
+  .ch.about{
+    .staff-list{
+      .column{
+        width: 50%;
+      }
+      .item{
+        padding: 8px 0;
+        span{
+          display: inline-block;
+          width: 160px;
+          float: left;
+        }
+        p{
+          margin-left: 170px;
+        }
+        a,a:link{
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .ch.location{
+    padding: 0;
+    position: relative;
+    height: 500px;
+    .map{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 500px;
+      width: 100%;
+      z-index: 1;
+      #mapitem{
+        height: 500px;
+        width: 100%;
+        .anchorBL{
+          opacity: .1;
+        }
+      }
+    }
+    .map_cover{
+      position: absolute;
+      bottom: 0;
+      z-index: 10;
+      width: 100%;
+      transform: translateY(50%);
+      .info{
+        font-size: 16px;
+        text-align: center;
+        background-color: rgba(94, 80, 158, 1);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        h4{
+          font-size: 19px;
+          padding-bottom: 6px;
+        }
+        p span{
+          display: inline-block;
+          margin: 0 10px;
+        }
+        .left, .right{
+          width: 50%;
+        }
+      }
+    }
+  }
+  .ch.ticket{
+    background-color: rgba(0,0,0, 0.35);
+    .container {
+      margin-bottom: 80px;
+    }
+
+    .pricelist{
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+    
+    .pricelist .ticket {
+      display: inline-block;
+      background-color: rgba(255,255,255, .2);
+      text-align: center;
+      box-sizing: border-box;
+      padding: 30px 20px;
+      justify-content: space-between;
+      align-items: stretch;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, .08);
+      height: 200px;
+      width: 100%;
+      position: relative;
+    }
+    
+    .pricelist .ticket h3 {
+      font-size: 18px;
+      line-height: 1.5;
+      height: 120px;
+    }
+    
+    .pricelist .ticket h3 span {
+      display: block;
+    }
+    
+    .pricelist .ticket h3 span.price {
+      font-size: 30px;
+      padding: 10px 0;
+    }
+    
+    .pricelist .ticket span.onsite {
+      font-size: 12px;
+      opacity: .3;
+    }
+    
+    .links {
+      margin-bottom: 20px;
+      margin-top: 50px;
+    }
+    
+    .links a {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      background-color: #3c4968;
+      text-align: center;
+      height: 80px;
+      line-height: 80px;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, .08);
+      transition: .3s all;
+    }
+    
+    .links a:hover {
+      box-shadow: 0 5 14px rgba(0, 0, 0, .2);
+      transform: translateY(-4px);
+    }
+    
+    .links a img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 70px;
+      height: 70px;
+      opacity: .38;
+      transform: rotate(20deg);
+      transition: .3s all;
+    }
+    
+    .links a:hover img {
+      transform: rotate(9deg);
+      width: 85px;
+      height: 85px;
+    }
+    
+    .items .item {
+      margin: 50px 0;
+      line-height: 2;
+    }
+    
+    .items .item h4 {
+      width: 150px;
+      float: left;
+      padding-right: 20px;
+      font-size: 20px;
+    }
+    
+    .items .item .content {
+      margin-left: 170px;
+    }    
+  }
+}
+
+.footer{
+  margin-top: 60px;
+  background-color: rgba(0,0,0, 0.35);
+  padding: 100px 0 150px 0;
+  line-height: 1.9em;
+  .meta{
+    font-size: 12px;
+    margin-top: 30px;
+    .pre{
+      opacity: .4;
+      color: #fff;
     }
   }
 }

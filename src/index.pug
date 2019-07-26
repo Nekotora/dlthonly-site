@@ -13,15 +13,15 @@ block main
         h4 2020.02.08 - 大连心悦酒店5L大厅
         .nav
     .ch.story
+      .background(id="story-swiper")
+        div.item(style="background-image: url(/story-1.jpg)")
+        div.item(style="background-image: url(/story-2.jpg)")
+        div.item(style="background-image: url(/story-3.jpg)")
       .container
         .card
           img.bg(src="story.png")
           .content
             p 滨城的幻想之风，<br>人与妖怪的世界，<br>缘起于未完的画卷，<br>第二届，属于大连的东方ProjectOnly，<br>东方风海例祭，<br>在幻想乡期待你的到来！
-    .ch.booth
-      .container
-        .title-box
-          h2 现场活动
     .ch.booth
       .container
         .title-box
@@ -37,10 +37,51 @@ block main
                   .tags
                     span.area {{item.area}}
                     span.type {{item.type}}
-    .ch.booth
-      .container
-        .title-box
-          h2 门票周边
+    .ch.location
+      .map
+        #mapitem
+      .map_cover
+        .container
+          .content
+            .info.clear
+              .left.column
+                h4 大连东方Project同人作品即卖会 09:00 - 16:00
+                p 
+                  span 大连心悦酒店5L大厅
+                  span 大连市中山区人民路81号
+              .right.column
+                h4 大连东方LiveParty 18:00 - 20:00
+                p 
+                  span 大连心悦酒店5L大厅
+                  span 大连市中山区人民路81号
+    .ch.ticket
+      .container.pricelist.clear
+        .columns.clear
+          .column
+            .ticket
+              h3(style="color: #95d9f4;")
+                span 东方ProjectOnly<br>日场预售票
+                span.price ￥60
+              span.onsite 活动当日现场门票 ￥70
+          .column
+            .ticket
+              h3(style="color: #f47a96;")
+                span 东方LiveParty<br>夜场预售票
+                span.price ￥160
+              span.onsite 活动当日现场门票 ￥199
+          .column
+            .ticket
+              h3(style="color: #74f7a4;")
+                span 东方LiveParty<br>东方ProjectOnly联票
+                span.price ￥220
+              span.onsite 【已售罄】联票限量，无现场票
+        .columns.links.clear
+          .column
+            a(href="https://m.nyanket.com/event/dltho",style="background-color: #52a9ce;") 官方喵通贩电子票<img src="./source/img/nyanket.png" />
+          .column
+            a(href="https://show.bilibili.com/platform/detail.html?id=16314",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./source/img/bilibili.png" />
+          .column
+            a(href="https://show.bilibili.com/platform/detail.html?id=16411",style="background-color: #e55075;") 夜场live Bilibili会员购电子票<img src="./source/img/bilibili.png" />
     .ch.apply
       .container
         .title-box
@@ -59,23 +100,44 @@ block main
                   p NPC/筹备组申请
                     span 开启中，点击了解筹备组申请说明
                 .content(style="background-image: url(npc-apply.jpg)")
-    .ch.location
-      .container
-        .title-box
-          h2 活动地点
-        .content
-          .map
-            #mapitem
-          .info
-            h4 大连心悦酒店5L大厅
-            p 大连市中山区人民路81号
-            p 
-    .ch.booth
+    .ch.about
       .container
         .title-box
           h2 协力 & 感谢
-        .content
-
+        .content.staff-list.clear
+          .column
+            .item
+              span 主催
+              p 云霞
+            .item
+              span 画师
+              p 橘前辈 / 玲⑨ / 
+                a(href='https://www.weibo.com/randomHS') 噫咿咿咦
+            .item
+              span LOGO设计
+              p
+                a(href='https://www.weibo.com/ashour') 阿时
+            .item
+              span Web / 设计 / 制品
+              p
+                a(href='http://flag.moe/?form=dlthonly') Nekotora
+            .item
+              span 票务合作
+              p
+                a(href='http://flag.moe/?form=dlthonly') Bilibili会员购
+                |  / 
+                a(href='http://flag.moe/?form=dlthonly') Nyanket!喵通贩
+          .column
+            .item
+              span 组织
+              p 大连东方Project同好会 / 大连东方ProjectOnly筹备组
+            .item
+              span Staff
+              p 橘前辈 / 風月⑨ / 千羽 / 闇幻 / 麻薯 / 风信子 / 麦麦 / 伊布 / 栋栋 / 老魏 / 哞菇 / 小爱 / 中秋 / 小兽 / 梦凌 / 殊小狸 / 晓畅 / 南零 / 莔莔 / Yin / 梨露 / 清疏 / 独角 / 柠檬 / 果子鱼AT ……
+            .item
+              span Special Thanks
+              p 东方LiveParty筹办组 / 「苍崎」企划 / 大型幻想对撞机 / 慕尼 PAK長 / 囧仙 / BUNGUS兔菌孢子 / 猫店长 
+              p <b>And YOU.</b>
     script(type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=64665E5BCEdfb17ec826f5f890f07c57")
     script(src="./source/script/index.js")
     script(src="./source/script/vue.min.js")
@@ -146,3 +208,72 @@ block main
         // todo: filter
       }
     })
+    var swiperBox = $('#story-swiper')
+    var bannerCurrent = 1
+    var bannerCount = swiperBox.children('.item').length
+    function next(){
+      bannerCurrent++;
+      if(bannerCurrent>bannerCount) bannerCurrent = 1
+      swiperBox.children('.item').removeClass('active')
+      swiperBox.children('.item').eq(bannerCurrent-1).addClass('active')
+    }
+    next()
+    setInterval("next()", 2000)
+
+    // 地图
+    var map = new BMap.Map('mapitem');
+    var point_a = new BMap.Point(121.663211, 38.931139);
+    var point_b = new BMap.Point(121.646111,38.922389);
+    var point_center = new BMap.Point(121.640187, 38.920089);
+    map.centerAndZoom(point_center, 14);
+    var marker_a = new BMap.Marker(point_a);
+    var marker_b = new BMap.Marker(point_b);
+
+    var label_a = new BMap.Label("DLTHO", {
+      offset: new BMap.Size(25, -10)
+    })
+
+    var label_b = new BMap.Label("DLTHO LiveParty", {
+      offset: new BMap.Size(25, -10),
+      border: "0",
+    })
+    window.l = label_a
+    var style = {
+      border: "none",
+      backgroundColor: "rgba(0,0,0,.5)",
+      color: "#fff",
+      padding: "5px 13px",
+      fontSize: "12px",
+      borderRadius: "100px"
+    }
+
+    label_a.setStyle(style)
+    label_b.setStyle(style)
+    marker_a.setLabel(label_a);
+    marker_b.setLabel(label_b);
+    map.addOverlay(marker_a);
+    map.addOverlay(marker_b);
+
+
+    map.setMapStyle({style:'dark'});
+    map.addControl(new BMap.NavigationControl({
+      type: BMAP_NAVIGATION_CONTROL_ZOOM
+    }));
+
+    $("#map_control #point_a").hover(function () {
+      map.centerAndZoom(point_a, 16);
+      marker_a.setAnimation(BMAP_ANIMATION_BOUNCE);
+    }, function () { 
+      map.centerAndZoom(point_center, 14);
+      marker_a.setAnimation(null);
+    })
+    
+    $("#map_control #point_b").hover(function () {
+      map.centerAndZoom(point_b, 16);
+      marker_b.setAnimation(BMAP_ANIMATION_BOUNCE);
+    }, function () {
+      map.centerAndZoom(point_center, 14);
+      marker_b.setAnimation(null);
+      })
+
+    
