@@ -1,10 +1,60 @@
 extends  ./base/layout.pug
-
+  
 block header
   -  nav = "meta"
   title 大连东方ProjectOnly / 大连THO
 
 block main
+  -
+    var list = [
+      {"guest":"幽闭星光","tags":"","area":"日本","type":"直参","image":"yuuhei satellite.jpg","desc":"","highlight": true},
+      {"guest":"少女分形","tags":"","area":"日本","type":"直参","image":"shoujo fractal.jpg","desc":"","highlight": true},
+      {"guest":"魂音泉","tags":"","area":"日本","type":"直参","image":"tamaonsen.jpg","highlight": true},
+      {"guest":"求文社","tags":"周边 同人本","area":"中国","type":"寄售","image":"QiuWen.jpg","desc":""},
+      {"guest":"疯帽子茶会","tags":"音乐","area":"中国","type":"直参","image":"Mad hatter tea.jpg","desc":""},
+      {"guest":"赤音羽","tags":"音乐","area":"中国","type":"寄售","image":"ChiYinYu.jpg","desc":""},
+      {"guest":"幻想诗篇Xanadu Canto","tags":"音乐","area":"中国","type":"直参","image":"Xanadu_Canto.jpg","desc":""},
+      {"guest":"幻想跃迁实验室","tags":"音乐 文字","area":"中国","type":"直参","image":"Lab LOF.jpg","desc":""},
+      {"guest":"Bunny rhyTHm","tags":"音乐","area":"中国","type":"直参","image":"bunny_rhyTHm.jpg","desc":""},
+      {"guest":"第零研究院","tags":"游戏 周边 文字","area":"中国","type":"直参","image":"zero.jpg","desc":""},
+      {"guest":"秋空Agrotech","tags":"文字","area":"中国","type":"直参","image":"Agrotech.jpg","desc":""},
+      {"guest":"醉梦笔笺","tags":"文字","area":"中国","type":"直参","image":"zmbj.jpg","desc":""},
+      {"guest":"陆柒团","tags":"周边","area":"中国","type":"寄售","image":"The Six Seven.jpg","desc":""},
+      {"guest":"AbsoluteZero","tags":"周边","area":"日本","type":"直参","image":"AbsoluteZero.jpg","desc":""},
+      {"guest":"酢.Ｍ.Ａ.Ｐ.","tags":"周边","area":"日本","type":"直参","image":"MAP.jpg","desc":""},
+      {"guest":"すなめりドリル","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
+      {"guest":"悶KID","tags":"周边","area":"日本","type":"直参","image":"KID.jpg","desc":""},
+      {"guest":"ぱいそんきっど","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
+      {"guest":"焼き鳥フェニックス","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
+      {"guest":"东方寓梦粹","tags":"文字","area":"中国","type":"直参","image":"YMC.jpg","desc":""},
+      {"guest":"XP社","tags":"卡牌","area":"中国","type":"直参","image":"XP.jpg","desc":""},
+      {"guest":"Alice手工坊","tags":"周边 同人本 服饰","area":"中国","type":"直参","image":"Alice.jpg","desc":""},
+      {"guest":"墨斯卡林之翼","tags":"周边 同人本","area":"中国","type":"寄售","image":"MW.jpg","desc":""},
+      {"guest":"CREST","tags":"音乐","area":"日本","type":"直参","image":"Crest.jpg","desc":""},
+      {"guest":"SJS团","tags":"周边","area":"中国","type":"直参","image":"sjs.jpg","desc":""},
+      {"guest":"囧仙子通贩","tags":"","area":"中国","type":"直参","image":"jxz.jpg","desc":""},
+      {"guest":"Rnote","tags":"","area":"日本","type":"代理寄售","image":"rnote.jpg","desc":""},
+      {"guest":"THB梦缘社","tags":"音乐","area":"中国","type":"直参","image":"THB.jpg","desc":""},
+      {"guest":"京都幻想剧团","tags":"音乐 动画","area":"中国","type":"直参","image":"kyoto fantasy troupe.jpg","desc":""},
+      {"guest":"幻奏盛宴","tags":"音乐","area":"中国","type":"直参","image":"touhou symphony .jpg","desc":""},
+      {"guest":"AQUA STYLE","tags":"游戏","area":"日本","type":"代理寄售","image":"AQUA STYLE.jpg","desc":""},
+      {"guest":"蛛网之财商团","tags":"","area":"韩国","type":"直参","image":"kumono_ie.jpg","desc":""},
+      {"guest":"Kross.ProJecT","tags":"","area":"韩国","type":"直参","image":"Kross.ProJecT.jpg","desc":""},
+      {"guest":"IRON Attack","tags":"音乐","area":"日本","type":"直参","image":"IRON ATTACK.jpg","desc":""},
+      {"guest":"纽约花残月","tags":"音乐","area":"中国","type":"代理寄售","image":"Hana Nekori Tsuki.jpg","desc":""},
+      {"guest":"蓬莱玛格特洛依德梦乐团","tags":"音乐","area":"中国","type":"寄售","image":"hourai.jpg","desc":""},
+      {"guest":"TsuBaKi","tags":"音乐","area":"中国","type":"直参","image":"TsuBaKi.jpg","desc":""},
+      {"guest":"幻想虚照","tags":"音乐","area":"中国","type":"寄售","image":"HXXZ.jpg","desc":""},
+      {"guest":"ジャージと愉快な仲間たち","tags":"音乐","area":"日本","type":"直参","image":"bellwo.jpg","desc":""},
+      {"guest":"TAMUSIC","tags":"音乐","area":"日本","type":"直参","image":"TAMUSIC.jpg","desc":""},
+      {"guest":"沈阳THOnly","tags":"音乐/周边","area":"中国","type":"直参","image":"SYTHO.jpg","desc":""},
+      {"guest":"Matthiola Records","tags":"音乐","area":"中国","type":"直参","image":"Matthiola Records.jpg","desc":""},
+      {"guest":"Yonder Voice","tags":"音乐","area":"中国","type":"直参","image":"Yonder Voice.jpg","desc":""},
+      {"guest":"幻梦缘起","tags":"同人本 周边","area":"中国","type":"直参","image":"HMYQ.jpg","desc":""},
+      {"guest":"隙间月台","tags":"","area":"中国","type":"寄售","image":"xjyt.jpg","desc":""},
+      {"guest":"NFT conFuoco orchestra","tags":"","area":"中国","type":"寄售","image":"nfto.jpg","desc":""},
+    ];
+    
   .page.page-index
     .setinfo
       .container.card
@@ -14,9 +64,9 @@ block main
         .nav
     .ch.story
       .background(id="story-swiper")
-        div.item(style="background-image: url(/story-1.jpg)")
-        div.item(style="background-image: url(/story-2.jpg)")
-        div.item(style="background-image: url(/story-3.jpg)")
+        div.item(style="background-image: url(./story-1.jpg)")
+        div.item(style="background-image: url(./story-2.jpg)")
+        div.item(style="background-image: url(./story-3.jpg)")
       .container
         .card
           img.bg(src="story.png")
@@ -29,14 +79,15 @@ block main
         .content.clear
           .guestlist#guestlist
             p(v-if="!loaded") Loading...
-            a(href="#",v-for="item in list")
-              .item(:class="{highlight: item.highlight}")
-                img(:src="item.image?'https://dlthonly.fmoe.cn/logo/'+item.image:'https://dlthonly.fmoe.cn/logo/na.png'")
-                .content
-                  h4 {{item.guest}}
-                  .tags
-                    span.area {{item.area}}
-                    span.type {{item.type}}
+            each item in list
+              a(href="#")
+                .item(class=item.highlight ? 'highlight': '')
+                  img(src=item.image?'https://dlthonly.fmoe.cn/logo/'+item.image:'https://dlthonly.fmoe.cn/logo/na.png')
+                  .content
+                    h4= item.guest
+                    .tags
+                      span.area= item.area
+                      span.type= item.type
     .ch.location
       .map
         #mapitem
@@ -93,13 +144,13 @@ block main
                 .big-btn
                   p 场贩/寄售摊位申请
                     span 开启中，点击了解详细参展规则
-                .content(style="background-image: url(booth-apply.jpg)")
+                .content(style="background-image: url(./booth-apply.jpg)")
             a(href="#")
               .booth-apply.npc-apply
                 .big-btn
                   p NPC/筹备组申请
                     span 开启中，点击了解筹备组申请说明
-                .content(style="background-image: url(npc-apply.jpg)")
+                .content(style="background-image: url(./npc-apply.jpg)")
     .ch.about
       .container
         .title-box
@@ -147,66 +198,6 @@ block main
         var scrollTop = $(window).scrollTop();
         scrollTop>2 ? $(".intro").addClass('off') : $(".intro").removeClass('off');
       });
-    })
-    var list = [
-      {"guest":"幽闭星光","tags":"","area":"日本","type":"直参","image":"yuuhei satellite.jpg","desc":"","highlight": true},
-      {"guest":"少女分形","tags":"","area":"日本","type":"直参","image":"shoujo fractal.jpg","desc":"","highlight": true},
-      {"guest":"魂音泉","tags":"","area":"日本","type":"直参","image":"tamaonsen.jpg","highlight": true},
-      {"guest":"求文社","tags":"周边 同人本","area":"中国","type":"寄售","image":"QiuWen.jpg","desc":""},
-      {"guest":"疯帽子茶会","tags":"音乐","area":"中国","type":"直参","image":"Mad hatter tea.jpg","desc":""},
-      {"guest":"赤音羽","tags":"音乐","area":"中国","type":"寄售","image":"ChiYinYu.jpg","desc":""},
-      {"guest":"幻想诗篇Xanadu Canto","tags":"音乐","area":"中国","type":"直参","image":"Xanadu_Canto.jpg","desc":""},
-      {"guest":"幻想跃迁实验室","tags":"音乐 文字","area":"中国","type":"直参","image":"Lab LOF.jpg","desc":""},
-      {"guest":"Bunny rhyTHm","tags":"音乐","area":"中国","type":"直参","image":"bunny_rhyTHm.jpg","desc":""},
-      {"guest":"第零研究院","tags":"游戏 周边 文字","area":"中国","type":"直参","image":"zero.jpg","desc":""},
-      {"guest":"秋空Agrotech","tags":"文字","area":"中国","type":"直参","image":"Agrotech.jpg","desc":""},
-      {"guest":"醉梦笔笺","tags":"文字","area":"中国","type":"直参","image":"zmbj.jpg","desc":""},
-      {"guest":"陆柒团","tags":"周边","area":"中国","type":"寄售","image":"The Six Seven.jpg","desc":""},
-      {"guest":"AbsoluteZero","tags":"周边","area":"日本","type":"直参","image":"AbsoluteZero.jpg","desc":""},
-      {"guest":"酢.Ｍ.Ａ.Ｐ.","tags":"周边","area":"日本","type":"直参","image":"MAP.jpg","desc":""},
-      {"guest":"すなめりドリル","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
-      {"guest":"悶KID","tags":"周边","area":"日本","type":"直参","image":"KID.jpg","desc":""},
-      {"guest":"ぱいそんきっど","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
-      {"guest":"焼き鳥フェニックス","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
-      {"guest":"东方寓梦粹","tags":"文字","area":"中国","type":"直参","image":"YMC.jpg","desc":""},
-      {"guest":"XP社","tags":"卡牌","area":"中国","type":"直参","image":"XP.jpg","desc":""},
-      {"guest":"Alice手工坊","tags":"周边 同人本 服饰","area":"中国","type":"直参","image":"Alice.jpg","desc":""},
-      {"guest":"墨斯卡林之翼","tags":"周边 同人本","area":"中国","type":"寄售","image":"MW.jpg","desc":""},
-      {"guest":"CREST","tags":"音乐","area":"日本","type":"直参","image":"Crest.jpg","desc":""},
-      {"guest":"SJS团","tags":"周边","area":"中国","type":"直参","image":"sjs.jpg","desc":""},
-      {"guest":"囧仙子通贩","tags":"","area":"中国","type":"直参","image":"jxz.jpg","desc":""},
-      {"guest":"Rnote","tags":"","area":"日本","type":"代理寄售","image":"rnote.jpg","desc":""},
-      {"guest":"THB梦缘社","tags":"音乐","area":"中国","type":"直参","image":"THB.jpg","desc":""},
-      {"guest":"京都幻想剧团","tags":"音乐 动画","area":"中国","type":"直参","image":"kyoto fantasy troupe.jpg","desc":""},
-      {"guest":"幻奏盛宴","tags":"音乐","area":"中国","type":"直参","image":"touhou symphony .jpg","desc":""},
-      {"guest":"AQUA STYLE","tags":"游戏","area":"日本","type":"代理寄售","image":"AQUA STYLE.jpg","desc":""},
-      {"guest":"蛛网之财商团","tags":"","area":"韩国","type":"直参","image":"kumono_ie.jpg","desc":""},
-      {"guest":"Kross.ProJecT","tags":"","area":"韩国","type":"直参","image":"Kross.ProJecT.jpg","desc":""},
-      {"guest":"IRON Attack","tags":"音乐","area":"日本","type":"直参","image":"IRON ATTACK.jpg","desc":""},
-      {"guest":"纽约花残月","tags":"音乐","area":"中国","type":"代理寄售","image":"Hana Nekori Tsuki.jpg","desc":""},
-      {"guest":"蓬莱玛格特洛依德梦乐团","tags":"音乐","area":"中国","type":"寄售","image":"hourai.jpg","desc":""},
-      {"guest":"TsuBaKi","tags":"音乐","area":"中国","type":"直参","image":"TsuBaKi.jpg","desc":""},
-      {"guest":"幻想虚照","tags":"音乐","area":"中国","type":"寄售","image":"HXXZ.jpg","desc":""},
-      {"guest":"ジャージと愉快な仲間たち","tags":"音乐","area":"日本","type":"直参","image":"bellwo.jpg","desc":""},
-      {"guest":"TAMUSIC","tags":"音乐","area":"日本","type":"直参","image":"TAMUSIC.jpg","desc":""},
-      {"guest":"沈阳THOnly","tags":"音乐/周边","area":"中国","type":"直参","image":"SYTHO.jpg","desc":""},
-      {"guest":"Matthiola Records","tags":"音乐","area":"中国","type":"直参","image":"Matthiola Records.jpg","desc":""},
-      {"guest":"Yonder Voice","tags":"音乐","area":"中国","type":"直参","image":"Yonder Voice.jpg","desc":""},
-      {"guest":"幻梦缘起","tags":"同人本 周边","area":"中国","type":"直参","image":"HMYQ.jpg","desc":""},
-      {"guest":"隙间月台","tags":"","area":"中国","type":"寄售","image":"xjyt.jpg","desc":""},
-      {"guest":"NFT conFuoco orchestra","tags":"","area":"中国","type":"寄售","image":"nfto.jpg","desc":""},
-    ];
-    var app = new Vue({
-      el: '#guestlist',
-      data: {
-        list: list,
-        loaded: true
-      },
-      mounted: function(){
-      },
-      methods: {
-        // todo: filter
-      }
     })
     var swiperBox = $('#story-swiper')
     var bannerCurrent = 1
@@ -275,5 +266,3 @@ block main
       map.centerAndZoom(point_center, 14);
       marker_b.setAnimation(null);
       })
-
-    
