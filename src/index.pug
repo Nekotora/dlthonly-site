@@ -72,85 +72,125 @@ block main
           img.bg(src="story.png")
           .content
             p 滨城的幻想之风，<br>人与妖怪的世界，<br>缘起于未完的画卷，<br>第二届，属于大连的东方ProjectOnly，<br>东方风海例祭，<br>在幻想乡期待你的到来！
-    .ch.booth
+      .container.clear
+        .description.columns
+          .column
+            h4 真正的东方 Project Only活动
+            h4 同人作品即时贩售会
+            h4 来自中日韩的海内外社团参展
+          .column
+            h4 专业的东方 Live 演出
+            h4 现场STG游戏比赛
+            h4 东方的创作者和爱好者们的线下活动
+    .ch.links
       .container
-        .title-box
-          h2 参展社团
-        .content.clear
-          .guestlist#guestlist
-            p(v-if="!loaded") Loading...
-            each item in list
-              a(href="#")
-                .item(class=item.highlight ? 'highlight': '')
-                  img(src=item.image?'https://dlthonly.fmoe.cn/logo/'+item.image:'https://dlthonly.fmoe.cn/logo/na.png')
-                  .content
-                    h4= item.guest
-                    .tags
-                      span.area= item.area
-                      span.type= item.type
-    .ch.location
-      .map
-        #mapitem
-      .map_cover
-        .container
-          .content
-            .info.clear
-              .left.column
-                h4 大连东方Project同人作品即卖会 09:00 - 16:00
-                p 
-                  span 大连心悦酒店5L大厅
-                  span 大连市中山区人民路81号
-              .right.column
-                h4 大连东方LiveParty 18:00 - 20:00
-                p 
-                  span 大连心悦酒店5L大厅
-                  span 大连市中山区人民路81号
-    .ch.ticket
-      .container.pricelist.clear
         .columns.clear
           .column
-            .ticket
-              h3(style="color: #95d9f4;")
-                span 东方ProjectOnly<br>日场预售票
-                span.price ￥60
-              span.onsite 活动当日现场门票 ￥70
+            a(href="https://weibo.com/u/6469850580",style="background-color: #e55075;") 官方微博@大连THOnly<img src="./links_icon/weibo.png" />
           .column
-            .ticket
-              h3(style="color: #f47a96;")
-                span 东方LiveParty<br>夜场预售票
-                span.price ￥160
-              span.onsite 活动当日现场门票 ￥199
+            a(href="https://jq.qq.com/?_wv=1027&k=5QcqcWK",style="background-color: #52a9ce;") QQ群 大连东方Project同好会<img src="./links_icon/qq.png" />
           .column
-            .ticket
-              h3(style="color: #74f7a4;")
-                span 东方LiveParty<br>东方ProjectOnly联票
-                span.price ￥220
-              span.onsite 【已售罄】联票限量，无现场票
-        .columns.links.clear
+            a(href="#",style="background-color: #55b565;") 网站 dltho.com<img src="./links_icon/web.png" />
+    .ch.disable
+      .container
+        .columns.clear
           .column
-            a(href="https://m.nyanket.com/event/dltho",style="background-color: #52a9ce;") 官方喵通贩电子票<img src="./source/img/nyanket.png" />
+            .title-box
+              h2 门票信息
+            h4 
+              span 暂未公开<br>少女祈祷中
           .column
-            a(href="https://show.bilibili.com/platform/detail.html?id=16314",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./source/img/bilibili.png" />
-          .column
-            a(href="https://show.bilibili.com/platform/detail.html?id=16411",style="background-color: #e55075;") 夜场live Bilibili会员购电子票<img src="./source/img/bilibili.png" />
+            .title-box
+              h2 社团嘉宾
+            h4 
+              span 暂未公开<br>少女祈祷中
+    //- .ch.booth
+    //-   .container
+    //-     .title-box
+    //-       h2 参展社团
+    //-     .content.clear
+    //-       .guestlist#guestlist
+    //-         each item in list
+    //-           a(href="#")
+    //-             .item(class=item.highlight ? 'highlight': '')
+    //-               img(src=item.image?'https://dlthonly.fmoe.cn/logo/'+item.image:'https://dlthonly.fmoe.cn/logo/na.png')
+    //-               .content
+    //-                 h4= item.guest
+    //-                 .tags
+    //-                   span.area= item.area
+    //-                   span.type= item.type
+
+              //- .left.column
+              //-   h4 大连东方Project同人作品即卖会 09:00 - 16:00
+              //-   p 
+              //-     span 大连心悦酒店5L大厅
+              //-     span 大连市中山区人民路81号
+              //- .right.column
+              //-   h4 大连东方LiveParty 18:00 - 20:00
+              //-   p 
+              //-     span 大连心悦酒店5L大厅
+              //-     span 大连市中山区人民路81号
+    //- .ch.ticket
+    //-   .container.pricelist.clear
+    //-     .columns.clear
+    //-       .column
+    //-         .ticket
+    //-           h3(style="color: #95d9f4;")
+    //-             span 东方ProjectOnly<br>日场预售票
+    //-             span.price ￥60
+    //-           span.onsite 活动当日现场门票 ￥70
+    //-       .column
+    //-         .ticket
+    //-           h3(style="color: #f47a96;")
+    //-             span 东方LiveParty<br>夜场预售票
+    //-             span.price ￥160
+    //-           span.onsite 活动当日现场门票 ￥199
+    //-       .column
+    //-         .ticket
+    //-           h3(style="color: #74f7a4;")
+    //-             span 东方LiveParty<br>东方ProjectOnly联票
+    //-             span.price ￥220
+    //-           span.onsite 【已售罄】联票限量，无现场票
+    //-     .columns.links.clear
+    //-       .column
+    //-         a(href="https://m.nyanket.com/event/dltho",style="background-color: #52a9ce;") 官方喵通贩电子票<img src="./source/img/nyanket.png" />
+    //-       .column
+    //-         a(href="https://show.bilibili.com/platform/detail.html?id=16314",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./source/img/bilibili.png" />
+    //-       .column
+    //-         a(href="https://show.bilibili.com/platform/detail.html?id=16411",style="background-color: #e55075;") 夜场live Bilibili会员购电子票<img src="./source/img/bilibili.png" />
+    //- .ch.ticket
+    //-   .container.pricelist.clear
+    //-     .columns.clear
+    //-       h2 门票信息准备中
     .ch.apply
       .container
         .title-box
           h2 参展报名
         .content
           .card
-            a(href="#")
+            a(href="javascript:alert('申请暂未开放，尽请期待~')")
               .booth-apply
                 .big-btn
                   p 场贩/寄售摊位申请
-                    span 开启中，点击了解详细参展规则
+                    span 暂未开放，细则和详细说明尽请期待
                 .content(style="background-image: url(./booth-apply.jpg)")
-            a(href="#")
+            a(href="javascript:alert('申请暂未开放，尽请期待~')")
               .booth-apply.npc-apply
                 .big-btn
                   p NPC/筹备组申请
-                    span 开启中，点击了解筹备组申请说明
+                    span 暂未开放
                 .content(style="background-image: url(./npc-apply.jpg)")
+    .ch.location(style="margin-bottom: 50px;")
+      .map
+        #mapitem
+      .map_cover
+        .container
+          .content
+            .info.clear
+              h4 大连东方Project同人作品即卖会 09:00 - 16:00
+                p 
+                  span 大连心悦酒店5L大厅
+                  span 大连市中山区人民路81号
     .ch.about
       .container
         .title-box
@@ -162,43 +202,53 @@ block main
               p 云霞
             .item
               span 画师
-              p 橘前辈 / 玲⑨ / 
+              p 橘前辈 / 玲⑨  <br>
                 a(href='https://www.weibo.com/randomHS') 噫咿咿咦
+                | / 
+                a(href='https://weibo.com/u/3180092524') 哈根达斯维达Jira
+            .item
+              span Web / 设计 / 制品
+              p
+                a(href='http://flag.moe/?form=dlthonly') Nekotora
+            //- .item
+            //-   span 票务合作
+            //-   p
+            //-     a(href='http://flag.moe/?form=dlthonly') Bilibili会员购
+            //-     |  / 
+            //-     a(href='http://flag.moe/?form=dlthonly') Nyanket!喵通贩
+          .column
             .item
               span LOGO设计
               p
                 a(href='https://www.weibo.com/ashour') 阿时
             .item
-              span Web / 设计 / 制品
-              p
-                a(href='http://flag.moe/?form=dlthonly') Nekotora
+              span 社群
+              p 大连东方Project同好会
             .item
-              span 票务合作
-              p
-                a(href='http://flag.moe/?form=dlthonly') Bilibili会员购
-                |  / 
-                a(href='http://flag.moe/?form=dlthonly') Nyanket!喵通贩
-          .column
-            .item
-              span 组织
-              p 大连东方Project同好会 / 大连东方ProjectOnly筹备组
-            .item
-              span Staff
-              p 橘前辈 / 風月⑨ / 千羽 / 闇幻 / 麻薯 / 风信子 / 麦麦 / 伊布 / 栋栋 / 老魏 / 哞菇 / 小爱 / 中秋 / 小兽 / 梦凌 / 殊小狸 / 晓畅 / 南零 / 莔莔 / Yin / 梨露 / 清疏 / 独角 / 柠檬 / 果子鱼AT ……
-            .item
-              span Special Thanks
-              p 东方LiveParty筹办组 / 「苍崎」企划 / 大型幻想对撞机 / 慕尼 PAK長 / 囧仙 / BUNGUS兔菌孢子 / 猫店长 
-              p <b>And YOU.</b>
+              span 执行
+              p 大连东方ProjectOnly筹备组
+
+            //- .item
+            //-   span Staff
+            //-   p 橘前辈 / 風月⑨ / 千羽 / 闇幻 / 麻薯 / 风信子 / 麦麦 / 伊布 / 栋栋 / 老魏 / 哞菇 / 小爱 / 中秋 / 小兽 / 梦凌 / 殊小狸 / 晓畅 / 南零 / 莔莔 / Yin / 梨露 / 清疏 / 独角 / 柠檬 / 果子鱼AT ……
+            //- .item
+            //-   span Special Thanks
+            //-   p 东方LiveParty筹办组 / 「苍崎」企划 / 大型幻想对撞机 / 慕尼 PAK長 / 囧仙 / BUNGUS兔菌孢子 / 猫店长 
+            //-   p <b>And YOU.</b>
     script(type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=64665E5BCEdfb17ec826f5f890f07c57")
     script(src="./source/script/index.js")
     script(src="./source/script/vue.min.js")
   script.
     $(function(){
       $(window).scroll(function(event){
-        var scrollTop = $(window).scrollTop();
-        scrollTop>2 ? $(".intro").addClass('off') : $(".intro").removeClass('off');
+        blurBg()
       });
+      blurBg()
     })
+    function blurBg(){
+      var scrollTop = $(window).scrollTop();
+      scrollTop>2 ? $(".intro").addClass('off') : $(".intro").removeClass('off');
+    }
     var swiperBox = $('#story-swiper')
     var bannerCurrent = 1
     var bannerCount = swiperBox.children('.item').length
@@ -241,9 +291,9 @@ block main
     label_a.setStyle(style)
     label_b.setStyle(style)
     marker_a.setLabel(label_a);
-    marker_b.setLabel(label_b);
+    //- marker_b.setLabel(label_b);
     map.addOverlay(marker_a);
-    map.addOverlay(marker_b);
+    //- map.addOverlay(marker_b);
 
 
     map.setMapStyle({style:'dark'});
@@ -258,11 +308,18 @@ block main
       map.centerAndZoom(point_center, 14);
       marker_a.setAnimation(null);
     })
+
+    var ua =navigator.userAgent.toLowerCase();
+    let isQQ = false
+    if(ua.indexOf('qq') !== -1) isQQ = true
+    if(ua.indexOf('mqqbrowser') !== -1) isQQ = true
+    if(isQQ) $('.bg-video').css('display','none')
     
-    $("#map_control #point_b").hover(function () {
-      map.centerAndZoom(point_b, 16);
-      marker_b.setAnimation(BMAP_ANIMATION_BOUNCE);
-    }, function () {
-      map.centerAndZoom(point_center, 14);
-      marker_b.setAnimation(null);
-      })
+    
+    //- $("#map_control #point_b").hover(function () {
+    //-   map.centerAndZoom(point_b, 16);
+    //-   marker_b.setAnimation(BMAP_ANIMATION_BOUNCE);
+    //- }, function () {
+    //-   map.centerAndZoom(point_center, 14);
+    //-   marker_b.setAnimation(null);
+    //-   })

@@ -8,10 +8,11 @@ body,
 html {
   font-family: "Microsoft YaHei";
   -webkit-font-smoothing: antialiased;
-  color: #333;
+  color: #fff;
   line-height: 1.8;
   overflow-x: hidden;
   font-size: 15px;
+  background-color: #212121;
 }
 
 .clear:after {
@@ -42,7 +43,7 @@ html {
 }
 
 .ch{
-  padding: 65px 0;
+  padding: 60px 0;
 }
 
 .main,
@@ -71,7 +72,11 @@ a,a:link{
 
 .title-box{
   font-size: 24px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
+  h2{
+    text-align: center;
+    letter-spacing: .4em;
+  }
 }
 
 .loading{
@@ -84,9 +89,9 @@ a,a:link{
 
 @keyframes loading
 {
-0%   {opacity: .6;transform: translateX(-10%)}
+0%   {opacity: .6;transform: translateX(-5%)}
 50%   {opacity: .8;}
-100% {opacity: .6;transform: translateX(10%)}
+100% {opacity: .6;transform: translateX(5%)}
 }
 
 
@@ -170,6 +175,9 @@ a,a:link{
   .ch.story{
     position: relative;
     margin-top: 100px;
+    .container{
+      position: relative;
+    }
     .background{
       position: absolute;
       top: 0;
@@ -209,7 +217,7 @@ a,a:link{
     }
     .content{
       position: absolute;
-      right: 12%;
+      right: 0;
       bottom: 10%;
       background-color: rgba(94,80,158, 0.8);
       padding: 40px;
@@ -219,6 +227,19 @@ a,a:link{
       font-size: 20px;
       letter-spacing: .5em;
       line-height: 2.2em;
+    }
+    .description{
+      padding-top: 30px;
+      text-align: center;
+      .column{
+        width: 50%;
+      }
+    }
+    .description h4{
+      font-size: 20px;
+      letter-spacing: .5em;
+      line-height: 2.2em;
+      font-weight: normal;
     }
   }
   .ch.booth{
@@ -321,6 +342,7 @@ a,a:link{
     }
   }
   .ch.about{
+    padding: 160px 0;
     .staff-list{
       .column{
         width: 50%;
@@ -433,11 +455,6 @@ a,a:link{
       opacity: .3;
     }
     
-    .links {
-      margin-bottom: 20px;
-      margin-top: 50px;
-    }
-    
     .links a {
       position: relative;
       display: block;
@@ -492,16 +509,172 @@ a,a:link{
 }
 
 .footer{
+  text-align: center;
   margin-top: 60px;
   background-color: rgba(0,0,0, 0.35);
-  padding: 100px 0 150px 0;
+  padding: 80px 0 120px 0;
   line-height: 1.9em;
+  letter-spacing: .5em;
+  h3{
+    font-size: 18px;
+    font-weight: normal;
+  }
   .meta{
     font-size: 12px;
     margin-top: 30px;
+    letter-spacing: .2em;
+    opacity: .6;
     .pre{
-      opacity: .4;
+      opacity:.3;
       color: #fff;
     }
+  }
+}
+
+.links {
+  a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3c4968;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .08);
+    transition: .3s all;
+    overflow: hidden;
+  }
+  a:hover {
+    box-shadow: 0 5 14px rgba(0, 0, 0, .2);
+    transform: translateY(-4px);
+  }
+  
+  a img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    opacity: .38;
+    transform: rotate(20deg);
+    transition: .3s all;
+  }
+  
+  a:hover img {
+    transform: rotate(9deg);
+    width: 85px;
+    height: 85px;
+  }
+}
+.ch.disable{
+  padding-bottom: 0;
+}
+
+.ch.disable .column{
+  width: 50%;
+  margin-bottom: 60px;
+  h4{
+    text-align: center;
+    padding: 130px 0;
+    background-color: rgba(0, 0, 0, .2);
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1em;
+    line-height: 3em;
+    span{
+      display: inline-block;
+      animation: loading 1s infinite alternate cubic-bezier(1,0,0,1);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: auto;
+    padding: 0 5%;
+  }
+  .column{
+    width: auto;
+    float: none;
+  }
+  .page-index .setinfo .card{
+    font-size: 24px;
+  }
+  .page-index .setinfo .card h4 {
+    font-size: 14px;
+  }
+  .page-index .ch.story .background{
+    height: 200px;
+  }
+  .page-index .ch.story img{
+    width: 180%;
+    left: -35%;
+  }
+  .page-index .ch.story .content{
+    padding: 20px;
+    p{
+      font-size: 14px;
+      line-height: 2em;
+    }
+  }
+  .page-index .ch.about .staff-list .column{
+    width: 100%;
+  }
+  .page-index .ch.apply .booth-apply{
+    height: auto;
+  }
+  .page-index .ch.apply .big-btn{
+    width: 100%;
+    height: 100px;
+  }
+  .page-index .ch.apply .booth-apply .content {
+    position: relative;
+    width: 100%;
+  }
+  .page-index .ch.about .staff-list .item {
+    font-size: 14px;
+  }
+  .page-index .ch.about .staff-list .item span{
+    float: none;
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .page-index .ch.about .staff-list .item p{
+    margin-left: 0;
+  }
+  .guestlist{
+    text-align: center;
+    margin-left: -5%;
+    margin-right: -5%;
+  }
+  .page-index .ch.booth .guestlist .item{
+    float: none;
+    display: inline-block;
+    width: 95px;
+    height: 95px;
+    margin: 8px 7px;
+  }
+  .page-index .ch.location .map_cover .info .left, .page-index .ch.location .map_cover .info .right{
+    width: auto;
+  }
+  .page-index .ch.story .description .column{
+    width: auto;
+  }
+  .page-index .ch.story .description h4{
+    font-size: 16px;
+    letter-spacing: .2em;
+  }
+  .ch.disable{
+    padding: 40px 0;
+    padding-bottom: 0;
+  }
+  .ch.disable .column{
+    width: auto;
+  }
+  .page-index .ch.location .map_cover .info h4{
+    font-size: 13px;
   }
 }
