@@ -8,7 +8,7 @@ body,
 html {
   font-family: "Microsoft YaHei";
   -webkit-font-smoothing: antialiased;
-  color: #fff;
+  color: rgba(255,255,255, 0.88);
   line-height: 1.8;
   overflow-x: hidden;
   font-size: 15px;
@@ -48,11 +48,12 @@ html {
 
 .main,
 .page-index{
-  margin-top: 70vh;
   position: relative;
   z-index: 10;
   color: #fff;
 }
+
+
 
 a,a:link{
   text-decoration: none;
@@ -71,11 +72,15 @@ a,a:link{
 }
 
 .title-box{
-  font-size: 24px;
+  font-size: 20px;
   padding-bottom: 60px;
   h2{
-    text-align: center;
-    letter-spacing: .4em;
+    letter-spacing: .2em;
+    background-color: #fff;
+    color: #333;
+    display: inline-block;
+    padding: 0 10px;
+    
   }
 }
 
@@ -136,7 +141,7 @@ a,a:link{
     bottom: 0;
     height: 100%;
     //background: linear-gradient(to top, rgba(0,0,0,0), rgba(50,50,80,.8)); 
-    background-color: rgba(0,0,0, 0.4);
+    background-color: rgba(0,0,0, 0.5);
     z-index: -3;
     opacity: 0;
   }
@@ -157,18 +162,38 @@ a,a:link{
 }
 
 .page-index{
-  .setinfo{
-    height: 30vh;
-    .card{
-      height: 80%;
-      margin: 10% auto;
-      box-sizing: border-box;
-      color: #fff;
-      font-size: 50px;
+  .ch-intro{
+    position: relative;
+    height: 100vh;
+    box-sizing: border-box;
+    color: #fff;
+    .event-title{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 75px;
       letter-spacing: .2em;
       text-align: center;
-      h4{
-        font-size: 24px;
+      padding: 5% 0;
+    }
+    h4{
+      font-size: 24px;
+    }
+    .nav{
+      font-size: 15px;
+      letter-spacing: 0;
+      margin-top: 60px;
+      background-color: rgba(0,0,0, 0.3);
+      a{
+        display: inline-block;
+        color: #fff;
+        padding: 20px 40px;
+        transition: .3s all;
+        &:hover{
+          background-color: #fff;
+          color: #3c4968;
+        }
       }
     }
   }
@@ -229,7 +254,8 @@ a,a:link{
       line-height: 2.2em;
     }
     .description{
-      padding-top: 30px;
+      padding-top: 40px;
+      padding-bottom: 10px;
       text-align: center;
       .column{
         width: 50%;
@@ -343,6 +369,10 @@ a,a:link{
   }
   .ch.about{
     padding: 160px 0;
+    a,a:link{
+      color: #fff;
+      text-decoration: underline;
+    }
     .staff-list{
       .column{
         width: 50%;
@@ -357,15 +387,27 @@ a,a:link{
         }
         p{
           margin-left: 170px;
-        }
-        a,a:link{
-          color: #fff;
-          text-decoration: underline;
+        } 
+      }
+    }
+    .gate{
+      margin-top: 40px;
+      a{
+        display: inline-block;
+        padding: 10px 20px;
+        background: rgba(255,255,255, 0.2);
+        text-decoration: none;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        transition: .3s all;
+        &:hover{
+          background: rgba(255,255,255, 0.3);
         }
       }
     }
   }
   .ch.location{
+    margin: 60px 0;
     padding: 0;
     position: relative;
     height: 500px;
@@ -386,23 +428,27 @@ a,a:link{
     }
     .map_cover{
       position: absolute;
-      bottom: 0;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 10;
-      width: 100%;
-      transform: translateY(50%);
+      margin: 0 auto;
       .info{
+        display: inline-block;
         font-size: 16px;
+        background-color: rgba(0,0,0,.6);
+        padding: 20px 30px;
         text-align: center;
-        background-color: rgba(94, 80, 158, 1);
-        padding-top: 20px;
-        padding-bottom: 20px;
         h4{
           font-size: 19px;
           padding-bottom: 6px;
+          font-weight: normal;
         }
         p span{
           display: inline-block;
           margin: 0 10px;
+          font-size: 14px;
+          font-weight: normal;
         }
         .left, .right{
           width: 50%;
@@ -531,6 +577,58 @@ a,a:link{
   }
 }
 
+.page-inner{
+  .container{
+    width: 740px;
+  }
+  .page-inner-title{
+    background-color: rgba(0,0,0, 0.35);
+    font-size: 26px;
+    padding: 40px 0;
+    h2{
+      font-weight: normal;
+      display: inline-block;
+    }
+    a{
+      color: #fff;
+      font-size: 20px;
+      display: inline-block;
+      padding: 0 20px;
+      background-color: rgba(255, 255, 255, 0.3);
+      margin: 5px 0;
+      float: right;
+      line-height: 60px;
+    }
+  }
+  .article{
+    p{
+      margin: 1em 0;
+      line-height: 1.8em;
+      color: rgba(255,255,255, 0.88)
+    }
+    a{
+      color: #fff;
+      text-decoration: underline;
+    }
+    img{
+      margin: 20px 0;
+      max-width: 100%;
+    }
+    a.btn{
+      display: inline-block;
+      padding: 20px 60px;
+      background: rgba(255,255,255, 0.2);
+      text-decoration: none;
+      margin-right: 16px;
+      margin-bottom: 16px;
+      transition: .3s all;
+      &:hover{
+        background: rgba(255,255,255, 0.3);
+      }
+    }
+  }
+}
+
 .links {
   a {
     position: relative;
@@ -577,7 +675,7 @@ a,a:link{
   h4{
     text-align: center;
     padding: 130px 0;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .1);
     font-size: 16px;
     font-weight: normal;
     letter-spacing: 1em;
@@ -590,6 +688,25 @@ a,a:link{
 }
 
 @media (max-width: 700px) {
+  .page-inner{
+    .container{
+      width: auto;
+      padding: 0 5%;
+    }
+    .page-inner-title{
+      h2{
+        font-size: 18px;
+        display: block;
+      }
+      a{
+        float: none;
+        padding: 0 20px;
+        line-height: 40px;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+    }
+  }
   .container {
     width: auto;
     padding: 0 5%;
@@ -598,11 +715,13 @@ a,a:link{
     width: auto;
     float: none;
   }
-  .page-index .setinfo .card{
-    font-size: 24px;
+  .nav{display:none;}
+  .page-index .ch-intro .event-title{
+    font-size: 7vw;
+    padding: 20% 0;
   }
-  .page-index .setinfo .card h4 {
-    font-size: 14px;
+  .page-index .ch-intro .event-title h4 {
+    font-size: 3.5vw;
   }
   .page-index .ch.story .background{
     height: 200px;
@@ -677,4 +796,24 @@ a,a:link{
   .page-index .ch.location .map_cover .info h4{
     font-size: 13px;
   }
+  .page-index .ch.location .map_cover{
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+  }
+  .page-index .ch.location .map_cover .container{
+    padding: 0;
+    width: 100%;
+  }
+  .page-index .ch.location .map_cover .info{
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+#egg1{
+  user-select:none;
 }
