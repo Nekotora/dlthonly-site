@@ -90,35 +90,31 @@ block main
         .container.clear
           .description.columns
             .column
-              h4 真正的东方 Project Only活动
-              h4 同人作品即时贩售会
-              h4 东方Project同人社团参展
+              h4 40+摊位齐聚全新扩建场地
+              h4 台风眼计划特别同人志
+              h4 限定神秘特典现场赠送
+              h4 日本画师流星计划首次公开
             .column
-              h4 现场STG游戏比赛
-              h4 东方的创作者和爱好者们的线下活动
-              h4 更多惊喜 尽请期待...
+              h4 日本东方音乐组合现场MiniLive
+              h4 活动前夜Clown东方爵士乐之夜
+              h4 夜场东方LiveParty
+              h4 本地社团境界36号演奏
       .ch.links
         .container
           .columns.clear
             .column
-              a(href="https://weibo.com/u/6469850580",style="background-color: #f76f8f;") 官方微博@大连THOnly<img src="./links_icon/weibo.png" />
+              a(href="https://weibo.com/dltho",style="background-color: #f76f8f;") 官方微博@大连THOnly<img src="./links_icon/weibo.png" />
             .column
               a(href="https://jq.qq.com/?_wv=1027&k=5QcqcWK",style="background-color: #60c3ea;") QQ群 大连东方Project同好会<img src="./links_icon/qq.png" />
             .column
               a(href="#",style="background-color: #6fe282;") 网站 dltho.com<img src="./links_icon/web.png" />
       .ch.disable
-        .container
-          .columns.clear
-            .column#booth
-              .title-box
-                h2 门票信息
-              h4 
-                span 暂未公开<br>少女祈祷中
-            .column#ticket
-              .title-box
-                h2 社团嘉宾
-              h4 
-                span 暂未公开<br>少女祈祷中
+        .container.clear
+          .content
+            .title-box
+              h2 社团嘉宾
+            h4 
+              span 暂未公开<br>少女祈祷中
       //- .ch.booth
       //-   .container
       //-     .title-box
@@ -145,38 +141,36 @@ block main
                 //-   p 
                 //-     span 大连心悦酒店5L大厅
                 //-     span 大连市中山区人民路81号
-      //- .ch.ticket
-      //-   .container.pricelist.clear
-      //-     .columns.clear
-      //-       .column
-      //-         .ticket
-      //-           h3(style="color: #95d9f4;")
-      //-             span 东方ProjectOnly<br>日场预售票
-      //-             span.price ￥60
-      //-           span.onsite 活动当日现场门票 ￥70
-      //-       .column
-      //-         .ticket
-      //-           h3(style="color: #f47a96;")
-      //-             span 东方LiveParty<br>夜场预售票
-      //-             span.price ￥160
-      //-           span.onsite 活动当日现场门票 ￥199
-      //-       .column
-      //-         .ticket
-      //-           h3(style="color: #74f7a4;")
-      //-             span 东方LiveParty<br>东方ProjectOnly联票
-      //-             span.price ￥220
-      //-           span.onsite 【已售罄】联票限量，无现场票
-      //-     .columns.links.clear
-      //-       .column
-      //-         a(href="https://m.nyanket.com/event/dltho",style="background-color: #52a9ce;") 官方喵通贩电子票<img src="./source/img/nyanket.png" />
-      //-       .column
-      //-         a(href="https://show.bilibili.com/platform/detail.html?id=16314",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./source/img/bilibili.png" />
-      //-       .column
-      //-         a(href="https://show.bilibili.com/platform/detail.html?id=16411",style="background-color: #e55075;") 夜场live Bilibili会员购电子票<img src="./source/img/bilibili.png" />
-      //- .ch.ticket
-      //-   .container.pricelist.clear
-      //-     .columns.clear
-      //-       h2 门票信息准备中
+      .ch.ticket#ticket
+        .container.pricelist.clear
+          .title-box
+            h2 票务信息
+          .columns.clear
+            .column
+              .ticket
+                h3(style="color: #95d9f4;")
+                  span 东方ProjectOnly<br>日场预售票
+                  span.price ￥60
+                span.onsite 入场门票+场刊+合同志无料
+            .column
+              .ticket
+                h3(style="color: #f47a96;")
+                  span 东方LiveParty<br>夜场预售票
+                  span.price ￥220
+                span.onsite 入场特典
+            .column
+              .ticket
+                h3(style="color: #74f7a4;")
+                  span 东方LiveParty<br>东方ProjectOnly联票
+                  span.price ￥279
+                span.onsite 入场特典+神秘套票特典
+          .columns.links.clear(style="padding-top: 20px;")
+            .column
+              a(href="https://m.nyanket.com/event/dltho2020",style="background-color: #52a9ce;") 日场活动 官方喵通贩电子票<img src="./nyanket.png" />
+            .column
+              a(href="https://show.bilibili.com/platform/detail.html?id=22414",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./bilibili.png" />
+            .column
+              a(href="https://show.bilibili.com/platform/detail.html?id=22981",style="background-color: #e55075;") 夜场live Bilibili会员购电子票<img src="./bilibili.png" />
       .ch.apply#apply
         .container
           .title-box
@@ -226,12 +220,12 @@ block main
                 span Web / 设计 / 制品
                 p
                   a(href='http://flag.moe/?form=dlthonly') Nekotora
-              //- .item
-              //-   span 票务合作
-              //-   p
-              //-     a(href='http://flag.moe/?form=dlthonly') Bilibili会员购
-              //-     |  / 
-              //-     a(href='http://flag.moe/?form=dlthonly') Nyanket!喵通贩
+              .item
+                span 票务合作
+                p
+                  a(href='http://flag.moe/?form=dlthonly') Bilibili会员购
+                  |  / 
+                  a(href='http://flag.moe/?form=dlthonly') Nyanket!喵通贩
             .column
               .item
                 span LOGO设计
