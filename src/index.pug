@@ -363,34 +363,5 @@ block main
       clickTimer++
       if(clickTimer>3){
         $('#egg1 sup').text(clickTimer)
-        if(clickTimer==5) $('#egg2').text('疑惑？')
-        if(clickTimer==10) $('#egg3').text('请停止你的行为')
-        if(clickTimer==18) $('#egg2').text('* 不 *')
-        if(clickTimer==31) $('#egg3').text('点屏幕就这么有意思吗？')
-        if(clickTimer==42) $('#egg2').text('请继续您的表演')
-        if(clickTimer==54) $('#egg3').text('没有彩蛋了，请不要点了，蟹蟹')
-        if(clickTimer==78) $('#egg2').text('真的没有彩蛋了')
-        if(clickTimer==89) $('#egg3').text('哦，您真的是太执着了')
-        if(clickTimer==102) $('#egg2').text('我大概知道您想要什么了！')
-        if(clickTimer==116) $('#egg3').text('下面，请欣赏————')
-        if(clickTimer==130){
-          $('.bg-main').css('background-image', 'url(/intro_alt.jpg)');
-          $('video').remove();
-          $('#egg1,#egg2,#egg3,#egg4').slideUp();
-          setTimeout(function(){
-            $('#egg1,#egg4').slideDown();
-          }, 5000)
-        }
       }
     })
-
-
-    
-    
-    //- $("#map_control #point_b").hover(function () {
-    //-   map.centerAndZoom(point_b, 16);
-    //-   marker_b.setAnimation(BMAP_ANIMATION_BOUNCE);
-    //- }, function () {
-    //-   map.centerAndZoom(point_center, 14);
-    //-   marker_b.setAnimation(null);
-    //-   })
