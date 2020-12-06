@@ -5,11 +5,14 @@ block header
   title 大连东方ProjectOnly / 大连THO
 
 block intro
-  .background.bg-main(style="background-image: url(./intro.jpg)")
-    video.bg-video(src="./dltho_index.mp4", autoplay="autoplay", loop="loop", muted="muted", x5-playsinline="" playsinline="" webkit-playsinline="" poster="" x-webkit-airplay="allow" preload x5-video-player-type="h5-page")
-  .background.bg-cover(style="background-image: url(./intro-blur.jpg)")
-  .background.bg-title
-  .background.bg-mask
+  .background(id="scene")
+    .bg(data-depth="0.3", style="background-image: url('./intro/bg.jpg')")
+    .dove(data-depth="0.25", style="background-image: url('./intro/dove.png')")
+    .title(data-depth="0.2")
+      img.inner-item.title-item(src="./intro/title.png")
+    .fig(data-depth="0.15", style="background-image: url('./intro/fig.png')")
+    .particle(data-depth="0.2", style="background-image: url('./intro/particle.png')")
+  .bg-mask
 
 block main
   -
@@ -65,8 +68,7 @@ block main
   .page.page-index
     .ch-intro
       .event-title
-        h2#egg1 东方风海例祭<sup>3</sup>
-        h4#egg2 大连东方ProjectOnly03
+        h2#egg1 大连东方ProjectOnly<sup>03</sup>
         h4#egg3 2021.01.30 - 大连星海国际金融中心
         .container#egg4
           .nav
@@ -76,24 +78,24 @@ block main
             a.enter-link(href="#apply") 活动报名
             a.enter-link(href="#about") 关于
             a.enter-link(href="/jp.html") 海外サークル出展特設ページ
-    .ch.disable
-        .container.clear
-          .content
-            .title-box
-              h2 【重要】活动取消通知
-            p.gg
-              span <b>由于不可抗力影响，我们遗憾地宣布本次大连THO02的前夜预热活动，THO日场活动和夜间的东方LiveParty活动将全部取消。</b><br>相关计划宣告中止，我们会尽快安排退票和后续其他事宜。<br>非常感谢所有人对此的辛劳付出，同时也希望您能理解我们做出的决定，再次表达我们深沉的歉意。<br><br>大连THO组委会<br>2020年1月23日
+    //- .ch.disable
+    //-     .container.clear
+    //-       .content
+    //-         .title-box
+    //-           h2 【重要】活动取消通知
+    //-         p.gg
+    //-           span <b>由于不可抗力影响，我们遗憾地宣布本次大连THO02的前夜预热活动，THO日场活动和夜间的东方LiveParty活动将全部取消。</b><br>相关计划宣告中止，我们会尽快安排退票和后续其他事宜。<br>非常感谢所有人对此的辛劳付出，同时也希望您能理解我们做出的决定，再次表达我们深沉的歉意。<br><br>大连THO组委会<br>2020年1月23日
     .page-content
       .ch.story#story
         .background(id="story-swiper")
           div.item(style="background-image: url(./story-1.jpg)")
           div.item(style="background-image: url(./story-2.jpg)")
           div.item(style="background-image: url(./story-3.jpg)")
-        .container
+        .container.story-card
           .card
             img.bg(src="story.png")
             .content
-              p 滨城的幻想之风，<br>人与妖怪的世界，<br>缘起于未完的画卷，<br>第二届，属于大连的东方ProjectOnly，<br>东方风海例祭，<br>在幻想乡期待你的到来！
+              p 滨城的幻想之风，<br>人与妖怪的世界，<br>缘起于未完的画卷，<br>第三届，属于大连的东方ProjectOnly，<br>东方风海例祭，<br>在幻想乡期待你的到来！
         .container.clear
           .description.columns
             .column
@@ -141,36 +143,43 @@ block main
                 //-   p 
                 //-     span 大连心悦酒店5L大厅
                 //-     span 大连市中山区人民路81号
-      .ch.ticket#ticket
+      .ch.ticket
         .container.pricelist.clear
           .title-box
             h2 票务信息
-          .columns.clear
-            .column
-              .ticket
-                h3(style="color: #95d9f4;")
-                  span 东方ProjectOnly<br>日场预售票
-                  span.price ￥60
-                span.onsite 入场门票+场刊+合同志无料
-            .column
-              .ticket
-                h3(style="color: #f47a96;")
-                  span 东方LiveParty<br>夜场预售票
-                  span.price ￥220
-                span.onsite 入场特典
-            .column
-              .ticket
-                h3(style="color: #74f7a4;")
-                  span 东方LiveParty<br>东方ProjectOnly联票
-                  span.price ￥279
-                span.onsite 入场特典+神秘套票特典
-          .columns.links.clear(style="padding-top: 20px;")
-            .column
-              a(href="https://m.nyanket.com/event/dltho2020",style="background-color: #52a9ce;") 日场活动 官方喵通贩电子票<img src="./nyanket.png" />
-            .column
-              a(href="https://show.bilibili.com/platform/detail.html?id=22414",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./bilibili.png" />
-            .column
-              a(href="https://show.bilibili.com/platform/detail.html?id=22981",style="background-color: #e55075;") 夜场live Bilibili会员购电子票<img src="./bilibili.png" />
+          .content
+            p.waiting-text 少女祈祷中...尽请期待
+        .container
+          .title-box
+            h2 社团列表
+          .content.clear
+            p.waiting-text 少女祈祷中...尽请期待
+          //- .columns.clear
+          //-   .column
+          //-     .ticket
+          //-       h3(style="color: #95d9f4;")
+          //-         span 东方ProjectOnly<br>日场预售票
+          //-         span.price ￥60
+          //-       span.onsite 入场门票+场刊+合同志无料
+          //-   .column
+          //-     .ticket
+          //-       h3(style="color: #f47a96;")
+          //-         span 东方LiveParty<br>夜场预售票
+          //-         span.price ￥220
+          //-       span.onsite 入场特典
+          //-   .column
+          //-     .ticket
+          //-       h3(style="color: #74f7a4;")
+          //-         span 东方LiveParty<br>东方ProjectOnly联票
+          //-         span.price ￥279
+          //-       span.onsite 入场特典+神秘套票特典
+          //- .columns.links.clear(style="padding-top: 20px;")
+          //-   .column
+          //-     a(href="https://m.nyanket.com/event/dltho2020",style="background-color: #52a9ce;") 日场活动 官方喵通贩电子票<img src="./nyanket.png" />
+          //-   .column
+          //-     a(href="https://show.bilibili.com/platform/detail.html?id=22414",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./bilibili.png" />
+          //-   .column
+          //-     a(href="https://show.bilibili.com/platform/detail.html?id=22981",style="background-color: #e55075;") 夜场live Bilibili会员购电子票<img src="./bilibili.png" />
       .ch.apply#apply
         .container
           .title-box
@@ -198,8 +207,8 @@ block main
               .info.clear
                 h4 大连东方Project同人作品即卖会 09:00 - 16:00
                   p 
-                    span 大连心悦酒店5L大厅
-                    span 大连市中山区人民路81号
+                    span 大连星海国际金融中心 2L
+                    span 大连市沙河口区星海广场A区13-15号
       .ch.about#about
         .container
           .title-box
@@ -250,7 +259,7 @@ block main
             a(href="/jp.html") 海外社团特别页面 / 海外サークル出展特設ページ
             a(href="http://2019.dltho.com/") 第一届旧站
     script(type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=64665E5BCEdfb17ec826f5f890f07c57")
-  
+  script(src="./source/script/parallax.min.js")
   script.
     $(function(){
       $(window).scroll(function(event){
@@ -276,9 +285,9 @@ block main
 
     // 地图
     var map = new BMap.Map('mapitem');
-    var point_a = new BMap.Point(121.663211, 38.931139);
+    var point_a = new BMap.Point(121.593493,38.892557);
     var point_b = new BMap.Point(121.646111,38.922389);
-    var point_center = new BMap.Point(121.640187, 38.920089);
+    var point_center = new BMap.Point(121.593493,38.892557);
     map.centerAndZoom(point_center, 14);
     var marker_a = new BMap.Marker(point_a);
     var marker_b = new BMap.Marker(point_b);
@@ -365,3 +374,5 @@ block main
         $('#egg1 sup').text(clickTimer)
       }
     })
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);

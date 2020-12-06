@@ -92,6 +92,15 @@ a,a:link{
   animation: loading 1s infinite alternate cubic-bezier(1,0,0,1);
 }
 
+.waiting-text{
+  background-color: rgba(0, 0, 0, .2);
+  font-size: 18px;
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255,255,255,.8);
+  letter-spacing: .5em;
+}
+
 @keyframes loading
 {
 0%   {opacity: .6;transform: translateX(-5%)}
@@ -107,6 +116,19 @@ a,a:link{
   left: 0;
   height: 100%;
   width: 100%;
+  transform: scale(1.08);
+  transition: .8s all cubic-bezier(1,0,0,1);
+  .bg-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .4);
+    transition: .8s opacity cubic-bezier(1,0,0,1);
+  }
   .background{
     position: absolute;
     top: 0;
@@ -115,46 +137,55 @@ a,a:link{
     width: 100%;
     background-size: cover;
     background-position: center center;
-    z-index: -10;
-    transition: .8s all cubic-bezier(1,0,0,1);
-  }
-  video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .8s all cubic-bezier(1,0,0,1);
-  }
-  .bg-cover{
-    z-index: -1;
-    opacity: 0;
-    transition: .8s all cubic-bezier(0.5,0,0,0.5);
-  }
-  .bg-title{
-    top: initial;
-    bottom: 0;
-    height: 50%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.6)); 
-    z-index: -2;
-  }
-  .bg-mask{
-    top: initial;
-    bottom: 0;
-    height: 100%;
-    //background: linear-gradient(to top, rgba(0,0,0,0), rgba(50,50,80,.8)); 
-    background-color: rgba(0,0,0, 0.5);
-    z-index: -3;
-    opacity: 0;
+    z-index: 1;
+    transition: .8s opacity filter cubic-bezier(1,0,0,1);
+    div{
+      background: center center no-repeat;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: .8s cubic-bezier(1,0,0,1);
+      transition-property: opacity, filter;
+      filter: blur(0px);
+    }
+    .bg{
+      filter: blur(0);
+    }
+    .fig{
+      bottom: 0;
+      left: 0;
+      background-size: auto 100%;
+      background-position: center bottom;
+    }
+    .title{
+      
+    }
+
+    .inner-item{
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .title-item{
+      right: 10%;
+      top: 10%;
+      height: auto;
+      width: 60%;
+    }
   }
   &.off{
-    .bg-cover{
-      //opacity: .98;
+    transform: scale(1.18);
+    .fig{opacity: .7; filter: blur(10px);}
+    .title{opacity: .3;}
+    .particle{filter: blur(10px);}
+    .dove{filter: blur(5px);}
+    .bg{
+      filter: blur(4px);
     }
-    .background{
-      transform: scale(1.18);
-      video{
-        filter: blur(20px)
-      }
-    }
+    .title{filter: blur(6px);}
     .bg-mask{
       opacity: 1;
     }
@@ -172,10 +203,14 @@ a,a:link{
       bottom: 0;
       left: 0;
       width: 100%;
-      font-size: 75px;
       letter-spacing: .2em;
       text-align: center;
       padding: 5% 0;
+      text-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    }
+    h2{
+      font-size: 70px;
+      letter-spacing: .1em;
     }
     h4{
       font-size: 24px;
@@ -200,8 +235,9 @@ a,a:link{
   .ch.story{
     position: relative;
     margin-top: 100px;
-    .container{
+    .container.story-card{
       position: relative;
+      padding-top: 150px;
     }
     .background{
       position: absolute;
@@ -243,8 +279,8 @@ a,a:link{
     .content{
       position: absolute;
       right: 0;
-      bottom: 10%;
-      background-color: rgba(94,80,158, 0.8);
+      bottom: 5%;
+      background-color: rgba(71,151,166, 0.75);
       padding: 40px;
       z-index: 10;
     }
@@ -686,6 +722,34 @@ a,a:link{
 }
 
 @media (max-width: 700px) {
+
+
+  .intro{
+    .background{
+      .fig{
+        bottom: 0;
+        left: 0;
+        background-size: auto 80%;
+        background-position: 10% bottom;
+      }
+      .title-item{
+        right: 10%;
+        top: 10%;
+        height: auto;
+        width: 80%;
+      }
+    }
+    &.off{
+      transform: scale(1.18);
+      .fig{opacity: 0;}
+      .title{opacity: .3;}
+      .bg-mask{
+        opacity: 1;
+      }
+    }
+  }
+
+
   .page-inner{
     .container{
       width: auto;
@@ -715,18 +779,23 @@ a,a:link{
   }
   .nav{display:none;}
   .page-index .ch-intro .event-title{
-    font-size: 7vw;
     padding: 20% 0;
   }
+  .page-index .ch-intro .event-title h2{
+    font-size: 6.8vw;
+  }
   .page-index .ch-intro .event-title h4 {
-    font-size: 3.5vw;
+    font-size: 4.2vw;
   }
   .page-index .ch.story .background{
     height: 200px;
   }
+  .page-index .ch.story .container.story-card{
+    padding-top: 0;
+  }
   .page-index .ch.story img{
     width: 180%;
-    left: -35%;
+    left: -15%;
   }
   .page-index .ch.story .content{
     padding: 20px;
