@@ -446,16 +446,16 @@ a,a:link{
     margin: 60px 0;
     padding: 0;
     position: relative;
-    height: 500px;
+    height: 550px;
     .map{
       position: absolute;
       top: 0;
       left: 0;
-      height: 500px;
+      height: 550px;
       width: 100%;
       z-index: 1;
       #mapitem{
-        height: 500px;
+        height: 550px;
         width: 100%;
         .anchorBL{
           opacity: .1;
@@ -464,13 +464,12 @@ a,a:link{
     }
     .map_cover{
       position: absolute;
-      bottom: 10%;
+      bottom: 5%;
       left: 50%;
       transform: translateX(-50%);
       z-index: 10;
       margin: 0 auto;
       .info{
-        display: inline-block;
         font-size: 16px;
         background-color: rgba(0,0,0,.6);
         padding: 20px 30px;
@@ -860,9 +859,7 @@ a,a:link{
   .ch.disable .column{
     width: auto;
   }
-  .page-index .ch.location .map_cover .info h4{
-    font-size: 13px;
-  }
+
   .page-index .ch.location .map_cover{
     bottom: 0;
     left: 0;
@@ -877,6 +874,25 @@ a,a:link{
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .page-index .ch.location{
+    height: auto;
+  }
+
+  .page-index .ch.location .map{
+    position: relative;
+  }
+
+  .page-index .ch.location .map_cover {
+    position: relative;
+
+  }
+
+  .page-index .ch.location .map_cover .info h4{
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 20px;
   }
 }
 .gg{

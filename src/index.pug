@@ -77,14 +77,14 @@ block main
             a.enter-link(href="#ticket") 门票周边
             a.enter-link(href="#apply") 活动报名
             a.enter-link(href="#about") 关于
-            a.enter-link(href="/jp.html") 海外サークル出展特設ページ
+            //- a.enter-link(href="/jp.html") 海外サークル出展特設ページ
     //- .ch.disable
     //-     .container.clear
     //-       .content
     //-         .title-box
     //-           h2 【重要】活动取消通知
     //-         p.gg
-    //-           span <b>由于不可抗力影响，我们遗憾地宣布本次大连THO02的前夜预热活动，THO日场活动和夜间的东方LiveParty活动将全部取消。</b><br>相关计划宣告中止，我们会尽快安排退票和后续其他事宜。<br>非常感谢所有人对此的辛劳付出，同时也希望您能理解我们做出的决定，再次表达我们深沉的歉意。<br><br>大连THO组委会<br>2020年1月23日
+    //-           span <b>由于不可抗力影响，我们遗憾地宣布本次大连THO02的前夜预热活动，THO日场活动和夜间的东方PartyNight活动将全部取消。</b><br>相关计划宣告中止，我们会尽快安排退票和后续其他事宜。<br>非常感谢所有人对此的辛劳付出，同时也希望您能理解我们做出的决定，再次表达我们深沉的歉意。<br><br>大连THO组委会<br>2020年1月23日
     .page-content
       .ch.story#story
         .background(id="story-swiper")
@@ -96,18 +96,6 @@ block main
             img.bg(src="story.png")
             .content
               p 滨城的幻想之风，<br>人与妖怪的世界，<br>缘起于未完的画卷，<br>第三届，属于大连的东方ProjectOnly，<br>东方风海例祭，<br>在幻想乡期待你的到来！
-        .container.clear
-          .description.columns
-            .column
-              h4 40+摊位齐聚全新扩建场地
-              h4 台风眼计划特别同人志
-              h4 限定神秘特典现场赠送
-              h4 日本画师流星计划首次公开
-            .column
-              h4 日本东方音乐组合现场MiniLive
-              h4 活动前夜Clown东方爵士乐之夜
-              h4 夜场东方LiveParty
-              h4 本地社团境界36号演奏
       .ch.links
         .container
           .columns.clear
@@ -139,7 +127,7 @@ block main
                 //-     span 大连心悦酒店5L大厅
                 //-     span 大连市中山区人民路81号
                 //- .right.column
-                //-   h4 大连东方LiveParty 18:00 - 20:00
+                //-   h4 大连东方PartyNight 18:00 - 20:00
                 //-   p 
                 //-     span 大连心悦酒店5L大厅
                 //-     span 大连市中山区人民路81号
@@ -147,39 +135,37 @@ block main
         .container.pricelist.clear
           .title-box
             h2 票务信息
-          .content
-            p.waiting-text 少女祈祷中...尽请期待
+          .columns.clear
+            .column
+              .ticket
+                h3(style="color: #95d9f4;")
+                  span 东方ProjectOnly<br>日场预售票
+                  span.price ￥50
+                span.onsite 入场门票+场刊
+            .column
+              .ticket
+                h3(style="color: #f47a96;")
+                  span 东方PartyNight<br>夜场PartyNight预售票
+                  span.price ￥99
+                span.onsite 入场特典+赠饮1杯
+            .column
+              .ticket
+                h3(style="color: #74f7a4;")
+                  span 东方PartyNight<br>东方ProjectOnly联票
+                  span.price ￥149
+                span.onsite 套票特典+入场特典+赠饮1杯
+          .columns.links.clear(style="padding-top: 20px;")
+            .column
+              a(href="https://m.nyanket.com/event/dltho2021",style="background-color: #52a9ce;") 日场活动 喵通贩电子票<img src="./nyanket.png" />
+            .column
+              a(href="https://show.bilibili.com/platform/detail.html?id=35007",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./bilibili.png" />
+            .column
+              a(href="https://show.bilibili.com/platform/detail.html?id=35261",style="background-color: #e55075;") 夜场PartyNight Bilibili会员购电子票<img src="./bilibili.png" />
         .container
           .title-box
             h2 社团列表
           .content.clear
             p.waiting-text 少女祈祷中...尽请期待
-          //- .columns.clear
-          //-   .column
-          //-     .ticket
-          //-       h3(style="color: #95d9f4;")
-          //-         span 东方ProjectOnly<br>日场预售票
-          //-         span.price ￥60
-          //-       span.onsite 入场门票+场刊+合同志无料
-          //-   .column
-          //-     .ticket
-          //-       h3(style="color: #f47a96;")
-          //-         span 东方LiveParty<br>夜场预售票
-          //-         span.price ￥220
-          //-       span.onsite 入场特典
-          //-   .column
-          //-     .ticket
-          //-       h3(style="color: #74f7a4;")
-          //-         span 东方LiveParty<br>东方ProjectOnly联票
-          //-         span.price ￥279
-          //-       span.onsite 入场特典+神秘套票特典
-          //- .columns.links.clear(style="padding-top: 20px;")
-          //-   .column
-          //-     a(href="https://m.nyanket.com/event/dltho2020",style="background-color: #52a9ce;") 日场活动 官方喵通贩电子票<img src="./nyanket.png" />
-          //-   .column
-          //-     a(href="https://show.bilibili.com/platform/detail.html?id=22414",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./bilibili.png" />
-          //-   .column
-          //-     a(href="https://show.bilibili.com/platform/detail.html?id=22981",style="background-color: #e55075;") 夜场live Bilibili会员购电子票<img src="./bilibili.png" />
       .ch.apply#apply
         .container
           .title-box
@@ -190,25 +176,29 @@ block main
                 .booth-apply
                   .big-btn
                     p 场贩/寄售摊位申请
-                      span 开放中
                   .content(style="background-image: url(./booth-apply.jpg)")
-              a(href="javascript:alert('申请暂未开放，尽请期待~')")
+              a(href="/staff-apply.html" target="_blank")
                 .booth-apply.npc-apply
                   .big-btn
                     p NPC/筹备组申请
-                      span 暂未开放
                   .content(style="background-image: url(./npc-apply.jpg)")
-      .ch.location#location(style="margin-bottom: 50px;")
+      .ch.location#location
         .map
           #mapitem
         .map_cover
           .container
             .content
               .info.clear
-                h4 大连东方Project同人作品即卖会 09:00 - 16:00
+                .left.column
+                  h4 大连东方Project同人作品即卖会 09:00 - 16:00
                   p 
-                    span 大连星海国际金融中心 2L
+                    span 大连星海国际金融中心
                     span 大连市沙河口区星海广场A区13-15号
+                .right.column
+                  h4 大连东方PartyNight 20:30 - 0:30
+                  p 
+                    span 大连 GIFT SPACE礼物空间
+                    span 大连市中山区胜利广场28号
       .ch.about#about
         .container
           .title-box
@@ -216,48 +206,48 @@ block main
           .content.staff-list.clear
             .column
               .item
+                span 原作
+                p ©上海アリス幻樂団
+              .item
                 span 主催
                 p 
                   a(href='http://qm.qq.com/cgi-bin/qm/qr?k=onv2G61R3aDHfFAN4xS1IICJXTjpwSgw') 云霞
+                  |  / 
+                  a(href='https://qm.qq.com/cgi-bin/qm/qr?k=vuRJUKV2cM-tBkXQG99zobYc0SeLJSDp&noverify=0') 麻薯
               .item
                 span 画师
-                p 橘前辈 / 玲⑨  <br>
-                  a(href='https://www.weibo.com/randomHS') 噫咿咿咦
-                  | / 
-                  a(href='https://weibo.com/u/3180092524') 哈根达斯维达Jira
+                p 余音 / 橘前辈
               .item
-                span Web / 设计 / 制品
+                span Web / 平面
                 p
-                  a(href='http://flag.moe/?form=dlthonly') Nekotora
+                  a(href='http://flag.moe/?form=dlthonly') 哞菇
               .item
-                span 票务合作
-                p
-                  a(href='http://flag.moe/?form=dlthonly') Bilibili会员购
-                  |  / 
-                  a(href='http://flag.moe/?form=dlthonly') Nyanket!喵通贩
+                span 设计 / 制品
+                p 大兔子
             .column
-              .item
-                span LOGO设计
-                p
-                  a(href='https://www.weibo.com/ashour') 阿时
               .item
                 span 社群
                 p 大连东方Project同好会
               .item
                 span 执行
                 p 大连东方ProjectOnly筹备组
-
-              //- .item
-              //-   span Staff
-              //-   p 橘前辈 / 風月⑨ / 千羽 / 闇幻 / 麻薯 / 风信子 / 麦麦 / 伊布 / 栋栋 / 老魏 / 哞菇 / 小爱 / 中秋 / 小兽 / 梦凌 / 殊小狸 / 晓畅 / 南零 / 莔莔 / Yin / 梨露 / 清疏 / 独角 / 柠檬 / 果子鱼AT ……
-              //- .item
-              //-   span Special Thanks
-              //-   p 东方LiveParty筹办组 / 「苍崎」企划 / 大型幻想对撞机 / 慕尼 PAK長 / 囧仙 / BUNGUS兔菌孢子 / 猫店长 
-              //-   p <b>And YOU.</b>
-
+              .item
+                span 票务合作
+                p
+                  a(href='http://show.bilibili.com/') Bilibili会员购
+                  |  / 
+                  a(href='http://nyanket.com/') Nyanket!喵通贩
+              .item
+                span Staffs / 特别感谢
+                p 千羽 / 闇幻 / 麻薯 / 风信子 / 麦麦 / 流浪子 ... And YOU.
           div.gate
-            a(href="/jp.html") 海外社团特别页面 / 海外サークル出展特設ページ
-            a(href="http://2019.dltho.com/") 第一届旧站
+            a(href="http://touhou-symphony.net") 幻奏盛宴 - 东方同人音乐会
+            a(href="http://houraisai.com") 蓬莱祭 - 来自韩国的THO活动
+            a(href="https://bj.thonly.name") 北京THO：京华万象展 活动网站
+            a(href="https://www.whtho.com/") 武汉THO：东方月桂影 活动网站
+            a(href="https://thwiki.cc/") THB Wiki
+            a(href="http://dltho.com/2019") 旧站 2019: 大连THO01网站
+            a(href="http://dltho.com/2020") 旧站 2020: 大连THO02网站
     script(type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=64665E5BCEdfb17ec826f5f890f07c57")
   script(src="./source/script/parallax.min.js")
   script.
@@ -286,9 +276,9 @@ block main
     // 地图
     var map = new BMap.Map('mapitem');
     var point_a = new BMap.Point(121.593493,38.892557);
-    var point_b = new BMap.Point(121.646111,38.922389);
-    var point_center = new BMap.Point(121.593493,38.892557);
-    map.centerAndZoom(point_center, 14);
+    var point_b = new BMap.Point(121.640718,38.925384);
+    var point_center = new BMap.Point(121.613895,38.903623);
+    map.centerAndZoom(point_center, 13);
     var marker_a = new BMap.Marker(point_a);
     var marker_b = new BMap.Marker(point_b);
 
@@ -296,7 +286,7 @@ block main
       offset: new BMap.Size(25, -10)
     })
 
-    var label_b = new BMap.Label("DLTHO LiveParty", {
+    var label_b = new BMap.Label("DLTHO PartyNight", {
       offset: new BMap.Size(25, -10),
       border: "0",
     })
@@ -313,9 +303,9 @@ block main
     label_a.setStyle(style)
     label_b.setStyle(style)
     marker_a.setLabel(label_a);
-    //- marker_b.setLabel(label_b);
+    marker_b.setLabel(label_b);
     map.addOverlay(marker_a);
-    //- map.addOverlay(marker_b);
+    map.addOverlay(marker_b);
 
 
     map.setMapStyle({style:'dark'});
