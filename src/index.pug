@@ -7,7 +7,7 @@ block header
 block intro
   .background(id="scene")
     .bg(data-depth="0.3", style="background-image: url('./intro/bg.jpg')")
-    .dove(data-depth="0.25", style="background-image: url('./intro/dove.png')")
+    //- .dove(data-depth="0.25", style="background-image: url('./intro/dove.png')")
     .title(data-depth="0.2")
       img.inner-item.title-item(src="./intro/title.png")
     .fig(data-depth="0.15", style="background-image: url('./intro/fig.png')")
@@ -15,61 +15,61 @@ block intro
   .bg-mask
 
 block main
-  -
-    var list = [
-      {"guest":"幽闭星光","tags":"","area":"日本","type":"直参","image":"yuuhei satellite.jpg","desc":"","highlight": true},
-      {"guest":"少女分形","tags":"","area":"日本","type":"直参","image":"shoujo fractal.jpg","desc":"","highlight": true},
-      {"guest":"魂音泉","tags":"","area":"日本","type":"直参","image":"tamaonsen.jpg","highlight": true},
-      {"guest":"求文社","tags":"周边 同人本","area":"中国","type":"寄售","image":"QiuWen.jpg","desc":""},
-      {"guest":"疯帽子茶会","tags":"音乐","area":"中国","type":"直参","image":"Mad hatter tea.jpg","desc":""},
-      {"guest":"赤音羽","tags":"音乐","area":"中国","type":"寄售","image":"ChiYinYu.jpg","desc":""},
-      {"guest":"幻想诗篇Xanadu Canto","tags":"音乐","area":"中国","type":"直参","image":"Xanadu_Canto.jpg","desc":""},
-      {"guest":"幻想跃迁实验室","tags":"音乐 文字","area":"中国","type":"直参","image":"Lab LOF.jpg","desc":""},
-      {"guest":"Bunny rhyTHm","tags":"音乐","area":"中国","type":"直参","image":"bunny_rhyTHm.jpg","desc":""},
-      {"guest":"第零研究院","tags":"游戏 周边 文字","area":"中国","type":"直参","image":"zero.jpg","desc":""},
-      {"guest":"秋空Agrotech","tags":"文字","area":"中国","type":"直参","image":"Agrotech.jpg","desc":""},
-      {"guest":"醉梦笔笺","tags":"文字","area":"中国","type":"直参","image":"zmbj.jpg","desc":""},
-      {"guest":"陆柒团","tags":"周边","area":"中国","type":"寄售","image":"The Six Seven.jpg","desc":""},
-      {"guest":"AbsoluteZero","tags":"周边","area":"日本","type":"直参","image":"AbsoluteZero.jpg","desc":""},
-      {"guest":"酢.Ｍ.Ａ.Ｐ.","tags":"周边","area":"日本","type":"直参","image":"MAP.jpg","desc":""},
-      {"guest":"すなめりドリル","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
-      {"guest":"悶KID","tags":"周边","area":"日本","type":"直参","image":"KID.jpg","desc":""},
-      {"guest":"ぱいそんきっど","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
-      {"guest":"焼き鳥フェニックス","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
-      {"guest":"东方寓梦粹","tags":"文字","area":"中国","type":"直参","image":"YMC.jpg","desc":""},
-      {"guest":"XP社","tags":"卡牌","area":"中国","type":"直参","image":"XP.jpg","desc":""},
-      {"guest":"Alice手工坊","tags":"周边 同人本 服饰","area":"中国","type":"直参","image":"Alice.jpg","desc":""},
-      {"guest":"墨斯卡林之翼","tags":"周边 同人本","area":"中国","type":"寄售","image":"MW.jpg","desc":""},
-      {"guest":"CREST","tags":"音乐","area":"日本","type":"直参","image":"Crest.jpg","desc":""},
-      {"guest":"SJS团","tags":"周边","area":"中国","type":"直参","image":"sjs.jpg","desc":""},
-      {"guest":"囧仙子通贩","tags":"","area":"中国","type":"直参","image":"jxz.jpg","desc":""},
-      {"guest":"Rnote","tags":"","area":"日本","type":"代理寄售","image":"rnote.jpg","desc":""},
-      {"guest":"THB梦缘社","tags":"音乐","area":"中国","type":"直参","image":"THB.jpg","desc":""},
-      {"guest":"京都幻想剧团","tags":"音乐 动画","area":"中国","type":"直参","image":"kyoto fantasy troupe.jpg","desc":""},
-      {"guest":"幻奏盛宴","tags":"音乐","area":"中国","type":"直参","image":"touhou symphony .jpg","desc":""},
-      {"guest":"AQUA STYLE","tags":"游戏","area":"日本","type":"代理寄售","image":"AQUA STYLE.jpg","desc":""},
-      {"guest":"蛛网之财商团","tags":"","area":"韩国","type":"直参","image":"kumono_ie.jpg","desc":""},
-      {"guest":"Kross.ProJecT","tags":"","area":"韩国","type":"直参","image":"Kross.ProJecT.jpg","desc":""},
-      {"guest":"IRON Attack","tags":"音乐","area":"日本","type":"直参","image":"IRON ATTACK.jpg","desc":""},
-      {"guest":"纽约花残月","tags":"音乐","area":"中国","type":"代理寄售","image":"Hana Nekori Tsuki.jpg","desc":""},
-      {"guest":"蓬莱玛格特洛依德梦乐团","tags":"音乐","area":"中国","type":"寄售","image":"hourai.jpg","desc":""},
-      {"guest":"TsuBaKi","tags":"音乐","area":"中国","type":"直参","image":"TsuBaKi.jpg","desc":""},
-      {"guest":"幻想虚照","tags":"音乐","area":"中国","type":"寄售","image":"HXXZ.jpg","desc":""},
-      {"guest":"ジャージと愉快な仲間たち","tags":"音乐","area":"日本","type":"直参","image":"bellwo.jpg","desc":""},
-      {"guest":"TAMUSIC","tags":"音乐","area":"日本","type":"直参","image":"TAMUSIC.jpg","desc":""},
-      {"guest":"沈阳THOnly","tags":"音乐/周边","area":"中国","type":"直参","image":"SYTHO.jpg","desc":""},
-      {"guest":"Matthiola Records","tags":"音乐","area":"中国","type":"直参","image":"Matthiola Records.jpg","desc":""},
-      {"guest":"Yonder Voice","tags":"音乐","area":"中国","type":"直参","image":"Yonder Voice.jpg","desc":""},
-      {"guest":"幻梦缘起","tags":"同人本 周边","area":"中国","type":"直参","image":"HMYQ.jpg","desc":""},
-      {"guest":"隙间月台","tags":"","area":"中国","type":"寄售","image":"xjyt.jpg","desc":""},
-      {"guest":"NFT conFuoco orchestra","tags":"","area":"中国","type":"寄售","image":"nfto.jpg","desc":""},
-    ];
+  //- -
+    //- var list = [
+    //-   {"guest":"幽闭星光","tags":"","area":"日本","type":"直参","image":"yuuhei satellite.jpg","desc":"","highlight": true},
+    //-   {"guest":"少女分形","tags":"","area":"日本","type":"直参","image":"shoujo fractal.jpg","desc":"","highlight": true},
+    //-   {"guest":"魂音泉","tags":"","area":"日本","type":"直参","image":"tamaonsen.jpg","highlight": true},
+    //-   {"guest":"求文社","tags":"周边 同人本","area":"中国","type":"寄售","image":"QiuWen.jpg","desc":""},
+    //-   {"guest":"疯帽子茶会","tags":"音乐","area":"中国","type":"直参","image":"Mad hatter tea.jpg","desc":""},
+    //-   {"guest":"赤音羽","tags":"音乐","area":"中国","type":"寄售","image":"ChiYinYu.jpg","desc":""},
+    //-   {"guest":"幻想诗篇Xanadu Canto","tags":"音乐","area":"中国","type":"直参","image":"Xanadu_Canto.jpg","desc":""},
+    //-   {"guest":"幻想跃迁实验室","tags":"音乐 文字","area":"中国","type":"直参","image":"Lab LOF.jpg","desc":""},
+    //-   {"guest":"Bunny rhyTHm","tags":"音乐","area":"中国","type":"直参","image":"bunny_rhyTHm.jpg","desc":""},
+    //-   {"guest":"第零研究院","tags":"游戏 周边 文字","area":"中国","type":"直参","image":"zero.jpg","desc":""},
+    //-   {"guest":"秋空Agrotech","tags":"文字","area":"中国","type":"直参","image":"Agrotech.jpg","desc":""},
+    //-   {"guest":"醉梦笔笺","tags":"文字","area":"中国","type":"直参","image":"zmbj.jpg","desc":""},
+    //-   {"guest":"陆柒团","tags":"周边","area":"中国","type":"寄售","image":"The Six Seven.jpg","desc":""},
+    //-   {"guest":"AbsoluteZero","tags":"周边","area":"日本","type":"直参","image":"AbsoluteZero.jpg","desc":""},
+    //-   {"guest":"酢.Ｍ.Ａ.Ｐ.","tags":"周边","area":"日本","type":"直参","image":"MAP.jpg","desc":""},
+    //-   {"guest":"すなめりドリル","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
+    //-   {"guest":"悶KID","tags":"周边","area":"日本","type":"直参","image":"KID.jpg","desc":""},
+    //-   {"guest":"ぱいそんきっど","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
+    //-   {"guest":"焼き鳥フェニックス","tags":"周边","area":"日本","type":"直参","image":"","desc":""},
+    //-   {"guest":"东方寓梦粹","tags":"文字","area":"中国","type":"直参","image":"YMC.jpg","desc":""},
+    //-   {"guest":"XP社","tags":"卡牌","area":"中国","type":"直参","image":"XP.jpg","desc":""},
+    //-   {"guest":"Alice手工坊","tags":"周边 同人本 服饰","area":"中国","type":"直参","image":"Alice.jpg","desc":""},
+    //-   {"guest":"墨斯卡林之翼","tags":"周边 同人本","area":"中国","type":"寄售","image":"MW.jpg","desc":""},
+    //-   {"guest":"CREST","tags":"音乐","area":"日本","type":"直参","image":"Crest.jpg","desc":""},
+    //-   {"guest":"SJS团","tags":"周边","area":"中国","type":"直参","image":"sjs.jpg","desc":""},
+    //-   {"guest":"囧仙子通贩","tags":"","area":"中国","type":"直参","image":"jxz.jpg","desc":""},
+    //-   {"guest":"Rnote","tags":"","area":"日本","type":"代理寄售","image":"rnote.jpg","desc":""},
+    //-   {"guest":"THB梦缘社","tags":"音乐","area":"中国","type":"直参","image":"THB.jpg","desc":""},
+    //-   {"guest":"京都幻想剧团","tags":"音乐 动画","area":"中国","type":"直参","image":"kyoto fantasy troupe.jpg","desc":""},
+    //-   {"guest":"幻奏盛宴","tags":"音乐","area":"中国","type":"直参","image":"touhou symphony .jpg","desc":""},
+    //-   {"guest":"AQUA STYLE","tags":"游戏","area":"日本","type":"代理寄售","image":"AQUA STYLE.jpg","desc":""},
+    //-   {"guest":"蛛网之财商团","tags":"","area":"韩国","type":"直参","image":"kumono_ie.jpg","desc":""},
+    //-   {"guest":"Kross.ProJecT","tags":"","area":"韩国","type":"直参","image":"Kross.ProJecT.jpg","desc":""},
+    //-   {"guest":"IRON Attack","tags":"音乐","area":"日本","type":"直参","image":"IRON ATTACK.jpg","desc":""},
+    //-   {"guest":"纽约花残月","tags":"音乐","area":"中国","type":"代理寄售","image":"Hana Nekori Tsuki.jpg","desc":""},
+    //-   {"guest":"蓬莱玛格特洛依德梦乐团","tags":"音乐","area":"中国","type":"寄售","image":"hourai.jpg","desc":""},
+    //-   {"guest":"TsuBaKi","tags":"音乐","area":"中国","type":"直参","image":"TsuBaKi.jpg","desc":""},
+    //-   {"guest":"幻想虚照","tags":"音乐","area":"中国","type":"寄售","image":"HXXZ.jpg","desc":""},
+    //-   {"guest":"ジャージと愉快な仲間たち","tags":"音乐","area":"日本","type":"直参","image":"bellwo.jpg","desc":""},
+    //-   {"guest":"TAMUSIC","tags":"音乐","area":"日本","type":"直参","image":"TAMUSIC.jpg","desc":""},
+    //-   {"guest":"沈阳THOnly","tags":"音乐/周边","area":"中国","type":"直参","image":"SYTHO.jpg","desc":""},
+    //-   {"guest":"Matthiola Records","tags":"音乐","area":"中国","type":"直参","image":"Matthiola Records.jpg","desc":""},
+    //-   {"guest":"Yonder Voice","tags":"音乐","area":"中国","type":"直参","image":"Yonder Voice.jpg","desc":""},
+    //-   {"guest":"幻梦缘起","tags":"同人本 周边","area":"中国","type":"直参","image":"HMYQ.jpg","desc":""},
+    //-   {"guest":"隙间月台","tags":"","area":"中国","type":"寄售","image":"xjyt.jpg","desc":""},
+    //-   {"guest":"NFT conFuoco orchestra","tags":"","area":"中国","type":"寄售","image":"nfto.jpg","desc":""},
+    //- ];
     
   .page.page-index
     .ch-intro
       .event-title
-        h2#egg1 大连东方ProjectOnly<sup>03</sup>
-        h4#egg3 2021.05.04 - 大连星海国际金融中心
+        h2#egg1 大连东方ProjectOnly<sup>04</sup>
+        h4#egg3 2022.02.13 - 大连星海国际金融中心
         .container#egg4
           .nav
             a.enter-link(href="#story") 活动介绍
@@ -78,20 +78,6 @@ block main
             a.enter-link(href="#apply") 活动报名
             a.enter-link(href="#about") 关于
             //- a.enter-link(href="/jp.html") 海外サークル出展特設ページ
-    //- .ch.disable
-    //-     .container.clear
-    //-       .content
-    //-         .title-box
-    //-           h2 【重要】活动延期通知
-    //-         p.gg
-    //-           span 
-    //-             | 各位东方同好：<br>
-    //-             | 很抱歉地通知各位，由于大连本地的疫情和防疫政策影响，本次大连THOnly03无法如期和大家见面了，与大连东方ProjectOnly03同期举办的PartyNight活动也宣布延期，我们会尽快办理相关的退票和社团沟通事务。<br>
-    //-             | 筹办组已经决定将大连东方ProjectOnly03<b>延期至2021年5月4日</b>举办，开票日期待定。和大连东方ProjectOnly联动的《台风眼》合同志计划及其他企划也会在后续一并处理。<br>
-    //-             | 山高路远，来日方长。追逐幻想的脚步不会就此停止，期待我们还有再会的一天。再次感谢所有为大连东方ProjectOnly付出的各位，以及默默支持我们的所有同好。没有你们，我们无法铸就这名为同人的奇迹。<br>
-    //-             | 再次向各位致歉，也感谢各位的理解，我们在风和气清的五月再会。 <br>
-    //-             | <br>
-    //-             | 大连东方Only筹备组
     .page-content
       .ch.story#story
         .background(id="story-swiper")
@@ -102,14 +88,14 @@ block main
           .card
             img.bg(src="story.png")
             .content
-              p 滨城的幻想之风，<br>人与妖怪的世界，<br>缘起于未完的画卷，<br>第三届，属于大连的东方ProjectOnly，<br>东方风海例祭，<br>在幻想乡期待你的到来！
+              p 滨城的幻想之风，<br>人与妖怪的世界，<br>缘起于未完的画卷，<br>第四届，属于大连的东方ProjectOnly，<br>东方风海例祭，<br>在幻想乡期待你的到来！
       .ch.links
         .container
           .columns.clear
             .column
               a(href="https://weibo.com/dltho",style="background-color: #f76f8f;") 官方微博@大连THOnly<img src="./links_icon/weibo.png" />
             .column
-              a(href="https://jq.qq.com/?_wv=1027&k=5QcqcWK",style="background-color: #60c3ea;") QQ群 大连东方Project同好会<img src="./links_icon/qq.png" />
+              a(href="https://jq.qq.com/?_wv=1027&k=5QcqcWK",style="background-color: #60c3ea;") QQ群 大连东方Project同好会 203085108<img src="./links_icon/qq.png" />
             .column
               a(href="#",style="background-color: #6fe282;") 网站 dltho.com<img src="./links_icon/web.png" />
       //- .ch.booth
@@ -142,32 +128,34 @@ block main
         .container.pricelist.clear
           .title-box
             h2 票务信息
-          .columns.clear
-            .column
-              .ticket
-                h3(style="color: #95d9f4;")
-                  span 东方ProjectOnly<br>日场预售票
-                  span.price ￥50
-                span.onsite 入场门票+场刊
-            .column
-              .ticket
-                h3(style="color: #f47a96;")
-                  span 东方PartyNight<br>夜场PartyNight预售票
-                  span.price ￥99
-                span.onsite 入场特典+赠饮1杯
-            .column
-              .ticket
-                h3(style="color: #74f7a4;")
-                  span 东方PartyNight<br>东方ProjectOnly联票
-                  span.price ￥149
-                span.onsite 套票特典+入场特典+赠饮1杯
-          .columns.links.clear(style="padding-top: 20px;")
-            .column
-              a(href="https://m.nyanket.com/event/dltho2021",style="background-color: #52a9ce;") 日场活动 喵通贩电子票<img src="./nyanket.png" />
-            .column
-              a(href="https://show.bilibili.com/platform/detail.html?id=35007",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./bilibili.png" />
-            .column
-              a(href="https://show.bilibili.com/platform/detail.html?id=35261",style="background-color: #e55075;") 夜场PartyNight Bilibili会员购电子票<img src="./bilibili.png" />
+          .content.clear
+            p.waiting-text 少女祈祷中...尽请期待
+          //- .columns.clear
+            //- .column
+            //-   .ticket
+            //-     h3(style="color: #95d9f4;")
+            //-       span 东方ProjectOnly<br>日场预售票
+            //-       span.price ￥50
+            //-     span.onsite 入场门票+场刊
+            //- .column
+            //-   .ticket
+            //-     h3(style="color: #f47a96;")
+            //-       span 东方PartyNight<br>夜场PartyNight预售票
+            //-       span.price ￥99
+            //-     span.onsite 入场特典+赠饮1杯
+            //- .column
+            //-   .ticket
+            //-     h3(style="color: #74f7a4;")
+            //-       span 东方PartyNight<br>东方ProjectOnly联票
+            //-       span.price ￥149
+            //-     span.onsite 套票特典+入场特典+赠饮1杯
+          //- .columns.links.clear(style="padding-top: 20px;")
+          //-   .column
+          //-     a(href="https://m.nyanket.com/event/dltho2021",style="background-color: #52a9ce;") 日场活动 喵通贩电子票<img src="./nyanket.png" />
+          //-   .column
+          //-     a(href="https://show.bilibili.com/platform/detail.html?id=35007",style="background-color: #e55075;") 日场活动 Bilibili会员购电子票<img src="./bilibili.png" />
+          //-   .column
+          //-     a(href="https://show.bilibili.com/platform/detail.html?id=35261",style="background-color: #e55075;") 夜场PartyNight Bilibili会员购电子票<img src="./bilibili.png" />
         .container
           .title-box
             h2 社团列表
@@ -179,15 +167,15 @@ block main
             h2 参展报名
           .content
             .card
-              a(href="/circle-apply.html" target="_blank")
+              a(href="https://wj.qq.com/s2/9289337/5449/" target="_blank")
                 .booth-apply
                   .big-btn
-                    p 场贩/寄售摊位申请
+                    p 【进行中】场贩/寄售摊位申请
                   .content(style="background-image: url(./booth-apply.jpg)")
-              a(href="/staff-apply.html" target="_blank")
+              a(href="#")
                 .booth-apply.npc-apply
                   .big-btn
-                    p NPC/筹备组申请
+                    p 【暂未开放】NPC/筹备组申请
                   .content(style="background-image: url(./npc-apply.jpg)")
       .ch.location#location
         .map
@@ -196,16 +184,16 @@ block main
           .container
             .content
               .info.clear
-                .left.column
-                  h4 大连东方Project同人作品即卖会 5月4日 09:00 - 16:00
+                .left.column(style="width: 100%")
+                  h4 大连东方Project同人作品即卖会 2月13日 09:00 - 16:00
                   p 
                     span 大连星海国际金融中心
                     span 大连市沙河口区星海广场A区13-15号
-                .right.column
-                  h4 大连东方PartyNight 5月3日 20:30 - 0:30
-                  p 
-                    span 大连 GIFT SPACE礼物空间
-                    span 大连市中山区胜利广场28号
+                //- .right.column
+                //-   h4 大连东方PartyNight 5月3日 20:30 - 0:30
+                //-   p 
+                //-     span 大连 GIFT SPACE礼物空间
+                //-     span 大连市中山区胜利广场28号
       .ch.about#about
         .container
           .title-box
@@ -259,6 +247,7 @@ block main
             <br>
             a(href="http://dltho.com/2019/") 旧站 2019: 大连THO01网站
             a(href="http://dltho.com/2020/") 旧站 2020: 大连THO02网站
+            a(href="http://dltho.com/2021/") 旧站 2021: 大连THO03网站
     script(type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=64665E5BCEdfb17ec826f5f890f07c57")
   script(src="./source/script/parallax.min.js")
   script.
@@ -288,8 +277,9 @@ block main
     var map = new BMap.Map('mapitem');
     var point_a = new BMap.Point(121.593493,38.892557);
     var point_b = new BMap.Point(121.640718,38.925384);
-    var point_center = new BMap.Point(121.613895,38.903623);
-    map.centerAndZoom(point_center, 13);
+    var point_center = new BMap.Point(121.593493,38.892557);
+    //- var point_center = new BMap.Point(121.613895,38.903623);
+    map.centerAndZoom(point_center, 14);
     var marker_a = new BMap.Marker(point_a);
     var marker_b = new BMap.Marker(point_b);
 
@@ -312,11 +302,11 @@ block main
     }
 
     label_a.setStyle(style)
-    label_b.setStyle(style)
+    //- label_b.setStyle(style)
     marker_a.setLabel(label_a);
-    marker_b.setLabel(label_b);
+    //- marker_b.setLabel(label_b);
     map.addOverlay(marker_a);
-    map.addOverlay(marker_b);
+    //- map.addOverlay(marker_b);
 
 
     map.setMapStyle({style:'dark'});
